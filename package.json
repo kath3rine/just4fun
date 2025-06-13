@@ -1,7 +1,7 @@
 {
   "name": "just4fun",
   "version": "0.1.0",
-  "homepage": "kath3rine.github.io/just4fun",
+  "homepage": "https://kath3rine.github.io/just4fun",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
