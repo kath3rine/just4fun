@@ -1,0 +1,49 @@
+#book-inside {
+    padding: 5px;
+    margin-bottom: 0px;
+    width: 70px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#book {
+    height: 200px;
+    background-color: tan;
+    flex-direction: column;
+    justify-content: flex-end;
+    display: flex;
+    text-wrap: wrap;
+}
+
+.top {
+    border-bottom: 7px brown solid;
+}
+
+.s1 {
+    height: 100px;
+}
+
+.s2 {
+    height: 120px;
+}
+
+.s3 {
+    height: 140px;
+}
+
+.s4 {
+    height: 160px;
+}
+
+.s5 {
+    height: 180px;
+}
+
+
+#shelf {
+    background-color: tan;
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    border: 10px brown solid;
+}
