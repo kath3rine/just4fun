@@ -1,6 +1,7 @@
 :root {
-    --pink: #e9bdcd;
-    --beige: #ece1c6;
-    --lt-green: #a2d28c;
-    --dk-green: #6da472;
+    --s1: red;
+    --s2: orange;
+    --s3: yellow;
+    --s4: green;
+    --s5: aqua;
 }

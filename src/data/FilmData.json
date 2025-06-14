@@ -1,0 +1,36 @@
+[
+    {
+        "title": "film1",
+        "date": "1/1",
+        "rating": "s2",
+        "review": "muy bien"
+    },
+    {
+        "title": "film2",
+        "date": "3/15",
+        "rating": "s3",
+        "review": "fine"
+    },
+    {
+        "title": "film3",
+        "date": "6/15",
+        "rating": "s1"
+    },
+    {
+        "title": "film4",
+        "date": "1/1",
+        "rating": "s2",
+        "review": "muy bien"
+    },
+    {
+        "title": "film5",
+        "date": "3/15",
+        "rating": "s3",
+        "review": "fine"
+    },
+    {
+        "title": "film6",
+        "date": "6/15",
+        "rating": "s2"
+    }
+]

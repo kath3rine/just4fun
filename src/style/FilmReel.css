@@ -1,0 +1,83 @@
+@import "./Global.css";
+
+/* FILM */
+
+.s1 {
+    background-color: var(--s1);
+}
+
+.s2 {
+    background-color: var(--s2);
+}
+
+.s3 {
+    background-color: var(--s3);
+}
+
+.s4 {
+    background-color: var(--s4);
+}
+
+.s5 {
+    background-color: var(--s5);
+}
+
+.film {
+    height: 200px;
+    width: 300px;
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+    margin: 5px;
+    border: 20px black solid;
+  }
+  
+  #film-front, #film-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  #film-front {
+    text-align: center;
+  }
+  
+  #film-back {
+    transform: rotateY(180deg);
+    font-weight: 400;
+  }
+  
+  .flipped #film-front {
+    transform: rotateY(180deg);
+  }
+  
+  .flipped #film-back {
+    transform: rotateY(360deg);
+  }
+
+  #wrapper1 {
+    background-color: black;
+    padding-top: 15px;
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  #wrapper2 {
+    height: 250px;
+    border-top: 15px white dashed;
+    border-bottom: 15px white dashed;
+  }
+
+/* FILM REEL */
+
+#reel {
+    padding-top: 15px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
