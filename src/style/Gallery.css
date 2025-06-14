@@ -1,0 +1,21 @@
+#item1, #item {
+    border: 3px blue solid;
+    width: 300px;
+    flex-shrink: 0;
+
+    img {
+        height: 30%;
+        width: 50%;
+    }
+}
+
+#gallery {
+    overflow: hidden;
+    width: 300px;
+}
+
+#gallery-content {
+    border: 3px red solid;
+    display: flex;
+    transition: transform 0.3s ease;
+}

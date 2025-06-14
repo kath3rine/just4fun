@@ -1,9 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import TraditionalArt from './sections/TraditionalArt.js'
 
 function App() {
   return (
     <div className="App">
+      <TraditionalArt/>
       <p>hewwo</p>
     </div>
   );
