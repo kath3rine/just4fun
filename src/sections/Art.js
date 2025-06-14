@@ -35,17 +35,20 @@ function Gallery({title, items}) {
     };
     
     return(
+        
         <div id="gallery">
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             
             <button onClick={onBack}>back</button>
             <button onClick={onNext}>next</button>
-            <div id="gallery-content" style={contentStyle}>
+            <div id="wrapper">
+                <div id="gallery-content" style={contentStyle}>
                 {items.map((item, index) => (
                     <div key={index}>
                         <Item item={item}/>
                     </div>
                 ))}
+            </div>
             </div>
             
         </div>
@@ -73,15 +76,16 @@ function Art() {
 
     const digital = [
         {
-            date: "2020",
-            med: "colored pencil",
+            date: "2025",
+            med: "touchdesigner",
             img: Visualizer,
             link: "https://drive.google.com/file/d/1BjeBTGx6p-eLK-zijbGXJCG2KZDsEStR/view?usp=sharing"
         }
     ]
 
     return (
-        <div id="art">
+        <div className="section" id="art">
+            
             <Gallery id="traditional-art" 
             items={traditional}
             title="traditional art"/>
