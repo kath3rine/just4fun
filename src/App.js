@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <h1>like if letterboxd and deviantart and spotify and goodreads had a baby</h1>
-      {/* <TraditionalArt/>
+      <TraditionalArt/>
       <DigitalArt/>
-  <FilmReel />*/}
+  <FilmReel />
       <Bookshelf/>
     </div>
   );

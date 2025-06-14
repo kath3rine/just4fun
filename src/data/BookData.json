@@ -2,29 +2,33 @@
     {
         "title": "a good girl's guide to murder",
         "date": "1/1",
-        "rating": "s5",
+        "rating": "s4",
+        "genre": "mystery",
         "review": "solid textbook murder-mystery"
     },
     {
         "title": "good girl, bad blood",
-        "date": "1/14",
+        "date": "1/10",
         "rating": "s4",
-        "review": "solid textbook murder-mystery"
+        "genre": "mystery"
     },
     {
         "title": "good as dead",
-        "date": "1/1",
+        "date": "2/11",
         "rating": "s2",
+        "genre": "mystery",
         "review": "disappointing. climax occurred 40% of the way through the book. super predictable murderer; story was more about covering up the murder than the murder itself"
     },
     {
         "title": "sunrise on the reaping",
-        "date": "1/1",
-        "rating": "s4"
+        "date": "3/27",
+        "rating": "s4",
+        "genre": "drama"
     },
     {
         "title": "last night at the telegraph club",
-        "date": "1/14",
-        "rating": "s4"
+        "date": "5/31",
+        "rating": "s4",
+        "genre": "drama"
     }
 ]

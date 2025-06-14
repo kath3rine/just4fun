@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import films from "../data/FilmData.json"
+import Films from "../data/FilmData.json"
 import "../style/FilmReel.css";
 
 function Film({film, index}) {
@@ -35,7 +35,7 @@ function FilmReel() {
             <h1>2025 watches</h1>
             <p>click each film 2 see my thoughts</p>
             <div id="reel">
-                {films.map((film, index) => (
+                {Films.map((film, index) => (
                     <Film film={film} index={index}/>
                 ))}
             </div>

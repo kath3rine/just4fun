@@ -3,12 +3,14 @@
         "title": "aftersun",
         "date": "2/13",
         "rating": "s2",
+        "genre": "drama",
         "review": "felt more like a montage than a film with an actual plot"
     },
     {
         "title": "anora",
         "date": "3/21",
-        "rating": "s3"
+        "rating": "s3",
+        "genre": "drama"
     },
     {
         "title": "bottoms",
@@ -19,29 +21,34 @@
     {
         "title": "shiva baby",
         "date": "6/5",
-        "rating": "s3"
+        "rating": "s3",
+        "genre": "drama"
     },
     {
         "title": "bodies bodies bodies",
         "date": "6/6",
         "rating": "s4",
+        "genre": "mystery",
         "review": "good watch. tense w/ a little bit of gen-z humor"
     },
     {
         "title": "chungking express",
         "date": "6/6",
         "rating": "s3",
+        "genre": "drama",
         "review": "could not bring myself to care"
     },
     {
         "title": "fallen angels",
         "date": "6/7",
-        "rating": "s4"
+        "rating": "s4",
+        "genre": "drama"
     },
     {
         "title": "blue velvet",
         "date": "6/14",
         "rating": "s3",
+        "genre": "mystery",
         "review": "wtf (derogatory)"
     }
 ]

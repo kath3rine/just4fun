@@ -1,49 +1,97 @@
-#book-inside {
-    padding: 5px;
-    margin-bottom: 0px;
-    width: 70px;
-    border-radius: 10px;
-    text-align: center;
-}
+@import '../App.css';
 
-#book {
-    height: 200px;
-    background-color: tan;
+#book-in {
+    width: 120px;
+    text-align: center;
+    display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    display: flex;
+}
+
+.top, .bottom {
+    height: 280px;
+    background-color: tan;
     text-wrap: wrap;
 }
+
+
+.book {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    perspective: 1000px;
+  }
+
+#book-outside, #book-inside {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+    border-radius: 10px;
+    
+  }
+
+  
+  #book-inside {
+    transform: rotateY(180deg);
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    
+    p {
+        padding: 0px 5px 0px 5px;
+    }
+  }
+  
+  .flipped #book-outside {
+    transform: rotateY(180deg);
+  }
+  
+  .flipped #book-inside {
+    transform: rotateY(360deg);
+  }
 
 .top {
     border-bottom: 7px brown solid;
 }
 
+.s1, .s2, .s3, .s4, .s5 {
+    border-radius: 20px;
+}
+
 .s1 {
-    height: 100px;
+    background-color: var(--s1);
+    height: 200px;
 }
 
 .s2 {
-    height: 120px;
+    height: 220px;
+    background-color: var(--s2);
 }
 
 .s3 {
-    height: 140px;
+    height: 240px;
+    background-color: var(--s3);
 }
 
 .s4 {
-    height: 160px;
+    height: 260px;
+    background-color: var(--s4);
 }
 
 .s5 {
-    height: 180px;
+    height: 280px;
+    background-color: var(--s5);
 }
 
+#title {
+    font-weight: bold;
+    margin: 10px;
+}
 
 #shelf {
     background-color: tan;
     display: flex;
     flex-wrap: wrap;
-    width: 320px;
+    width: 480px;
     border: 10px brown solid;
 }

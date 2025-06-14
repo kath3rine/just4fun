@@ -2,24 +2,12 @@
   padding: 20px;
 }
 
-.s1 {
-  background-color: pink;
-}
-
-.s2 {
-  background-color: orange;
-}
-
-.s3 {
-  background-color: yellow;
-}
-
-.s4 {
-  background-color: lime;
-}
-
-.s5 {
-  background-color: aqua;
+:root {
+  --s1: red;
+  --s2: orange;
+  --s3: yellow;
+  --s4: green;
+  --s5: aqua;
 }
 
 .App-header {
