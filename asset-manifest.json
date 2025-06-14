@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/just4fun/static/css/main.e9f4198a.css",
-    "main.js": "/just4fun/static/js/main.9966b43e.js",
+    "main.css": "/just4fun/static/css/main.25c0d155.css",
+    "main.js": "/just4fun/static/js/main.d7b081c9.js",
     "static/js/453.0f7f6009.chunk.js": "/just4fun/static/js/453.0f7f6009.chunk.js",
-    "static/media/logo.svg": "/just4fun/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/visualizer.png": "/just4fun/static/media/visualizer.2cf3c3ecb1a9681a081e.png",
+    "static/media/panda.png": "/just4fun/static/media/panda.4255c43b7d02f4e9e6df.png",
+    "static/media/fruit.png": "/just4fun/static/media/fruit.7ed638658f06f44c06eb.png",
+    "static/media/face.jpg": "/just4fun/static/media/face.bea7428545f55c3bcfbc.jpg",
     "index.html": "/just4fun/index.html",
-    "main.e9f4198a.css.map": "/just4fun/static/css/main.e9f4198a.css.map",
-    "main.9966b43e.js.map": "/just4fun/static/js/main.9966b43e.js.map",
+    "main.25c0d155.css.map": "/just4fun/static/css/main.25c0d155.css.map",
+    "main.d7b081c9.js.map": "/just4fun/static/js/main.d7b081c9.js.map",
     "453.0f7f6009.chunk.js.map": "/just4fun/static/js/453.0f7f6009.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9f4198a.css",
-    "static/js/main.9966b43e.js"
+    "static/css/main.25c0d155.css",
+    "static/js/main.d7b081c9.js"
   ]
 }
