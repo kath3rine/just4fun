@@ -1,0 +1,36 @@
+/* ITEM */
+
+#item {
+    width: 500px;
+    height: 500px;
+    flex-shrink: 0;
+}
+
+#img-container {
+    height: 80%;
+    img {
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* GALLERY */
+
+#gallery {
+    width: 500px;
+    overflow: hidden;
+}
+
+#gallery-content {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+
+/* ART */
+
+#art {
+    display: flex;
+}

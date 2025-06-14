@@ -1,10 +1,9 @@
-import TraditionalArt from './sections/TraditionalArt.js'
+import Art from "./sections/Art.js";
 
 function App() {
   return (
     <div className="App">
-      <TraditionalArt/>
-      <p>hewwo</p>
+      <Art />
     </div>
   );
 }
