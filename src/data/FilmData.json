@@ -1,36 +1,47 @@
 [
     {
-        "title": "film1",
-        "date": "1/1",
+        "title": "aftersun",
+        "date": "2/13",
         "rating": "s2",
-        "review": "muy bien"
+        "review": "felt more like a montage than a film with an actual plot"
     },
     {
-        "title": "film2",
-        "date": "3/15",
+        "title": "anora",
+        "date": "3/21",
+        "rating": "s3"
+    },
+    {
+        "title": "bottoms",
+        "date": "3/23",
+        "rating": "s4",
+        "review": "booksmart's awkward gay cousin"
+    },
+    {
+        "title": "shiva baby",
+        "date": "6/5",
+        "rating": "s3"
+    },
+    {
+        "title": "bodies bodies bodies",
+        "date": "6/6",
+        "rating": "s4",
+        "review": "good watch. tense w/ a little bit of gen-z humor"
+    },
+    {
+        "title": "chungking express",
+        "date": "6/6",
         "rating": "s3",
-        "review": "fine"
+        "review": "could not bring myself to care"
     },
     {
-        "title": "film3",
-        "date": "6/15",
-        "rating": "s1"
+        "title": "fallen angels",
+        "date": "6/7",
+        "rating": "s4"
     },
     {
-        "title": "film4",
-        "date": "1/1",
-        "rating": "s2",
-        "review": "muy bien"
-    },
-    {
-        "title": "film5",
-        "date": "3/15",
+        "title": "blue velvet",
+        "date": "6/14",
         "rating": "s3",
-        "review": "fine"
-    },
-    {
-        "title": "film6",
-        "date": "6/15",
-        "rating": "s2"
+        "review": "wtf (derogatory)"
     }
 ]

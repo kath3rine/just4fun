@@ -1,4 +1,4 @@
-@import "./Global.css";
+@import "../App.css";
 
 /* FILM */
 
@@ -23,12 +23,11 @@
 }
 
 .film {
-    height: 200px;
-    width: 300px;
+    height: 125px;
+    width: 175px;
     position: relative;
     cursor: pointer;
     perspective: 1000px;
-    margin: 5px;
     border: 20px black solid;
   }
   
@@ -41,6 +40,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    padding: 10px;
   }
 
   #film-front {
@@ -63,12 +63,12 @@
   #wrapper1 {
     background-color: black;
     padding-top: 15px;
-    height: 300px;
-    margin-top: 20px;
+    height: 250px;
+    margin-bottom: 30px;
   }
 
   #wrapper2 {
-    height: 250px;
+    height: 195px;
     border-top: 15px white dashed;
     border-bottom: 15px white dashed;
   }
@@ -76,8 +76,6 @@
 /* FILM REEL */
 
 #reel {
-    padding-top: 15px;
-    height: 300px;
     display: flex;
     flex-wrap: wrap;
 }

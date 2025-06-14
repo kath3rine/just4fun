@@ -14,8 +14,9 @@ function Film({film, index}) {
             <div id="wrapper2">
                 <div className={`film ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
                     <div className={film.rating} id="film-front">
-                        <h1>{film.title}</h1>
-                        <p>{index}</p>
+                        <p>{index + 1}</p>
+                        <h2>{film.title}</h2>
+                        
                     </div>
 
                     <div className={film.rating} id="film-back">
@@ -30,10 +31,11 @@ function Film({film, index}) {
 
 function FilmReel() {
     return(
-        <div id="film-reel">
-            <h1>moviez</h1>
+        <div className="section" id="film-reel">
+            <h1>2025 watches</h1>
+            <p>click each film 2 see my thoughts</p>
             <div id="reel">
-                    {films.map((film, index) => (
+                {films.map((film, index) => (
                     <Film film={film} index={index}/>
                 ))}
             </div>

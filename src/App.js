@@ -4,7 +4,8 @@ import FilmReel from "./sections/FilmReel.js";
 function App() {
   return (
     <div className="App">
-      <h2>like if letterboxd and deviantart and spotify and goodreads had a baby</h2>
+      <h1>like if letterboxd and deviantart and spotify and goodreads had a baby</h1>
+      <Art/>
       <FilmReel />
     </div>
   );
