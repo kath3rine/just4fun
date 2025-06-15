@@ -29,7 +29,7 @@ function Film({film, index}) {
     )
 }
 
-function Watch() {
+function FilmReel() {
     return(
         <div className="section" id="film-reel">
             <h1>2025 watches</h1>
