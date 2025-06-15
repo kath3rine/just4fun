@@ -1,5 +1,10 @@
 @import '../App.css';
 
+:root {
+    --dk-brown: rgb(74, 42, 20);
+    --lt-brown: rgb(126, 76, 40);
+}
+
 #book-in {
     width: 120px;
     text-align: center;
@@ -10,7 +15,7 @@
 
 .top, .bottom {
     height: 280px;
-    background-color: brown;
+    background-color: var(--dk-brown);
     text-wrap: wrap;
 }
 
@@ -51,7 +56,7 @@
   }
 
 .top {
-    border-bottom: 7px black solid;
+    border-bottom: 7px var(--lt-brown) solid;
 }
 
 .s1, .s2, .s3, .s4, .s5 {
@@ -64,9 +69,19 @@
     height: 200px;
 }
 
+.s15 {
+    background-color: var(--s15);
+    height: 200px;
+}
+
 .s2 {
     height: 220px;
     background-color: var(--s2);
+}
+
+.s25 {
+    height: 220px;
+    background-color: var(--s25);
 }
 
 .s3 {
@@ -74,9 +89,19 @@
     background-color: var(--s3);
 }
 
+.s35 {
+    height: 240px;
+    background-color: var(--s35);
+}
+
 .s4 {
     height: 260px;
     background-color: var(--s4);
+}
+
+.s45 {
+    height: 260px;
+    background-color: var(--s45);
 }
 
 .s5 {
@@ -90,9 +115,9 @@
 }
 
 #shelf {
-    background-color: brown;
+    background-color: var(--dk-brown);
     display: flex;
     flex-wrap: wrap;
     width: 480px;
-    border: 10px black solid;
+    border: 10px var(--lt-brown) solid;
 }

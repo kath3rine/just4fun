@@ -1,0 +1,57 @@
+import Notebook from './Notebook.js'
+import Impostar from "../assets/art/impostar.JPG"
+import Portfolio from "../assets/art/portfolio.png";
+import Tinderfy from "../assets/art/tinderfy.png";
+
+function Programming() {
+    const items = [
+        [
+            {
+                name: "tinderfy",
+                date: "2025",
+                med: "web app (react + flask)",
+                img: Tinderfy,
+                link: "https://github.com/kath3rine/tinderfy-v2",
+                desc: "spotify wrapped meets dating app! displays spotify analytics in a tinder profile"
+            }
+        ],
+        [
+            {
+                name: "impost-AR",
+                date: "2025",
+                med: "augmented reality (unity)",
+                img: Impostar,
+                link: "https://sites.google.com/terpmail.umd.edu/emma-and-katherine-capstone",
+                desc: "multiplayer AR escape room / scavenger hunt! players solve virtual and physical puzzles to uncover clues and figure out which player is the imposter"
+            }
+        ],
+        [
+            {
+                name: "professional portfolio",
+                date: "2025",
+                med: "website (react)",
+                img: Portfolio,
+                link: "https://kath3rine.github.io"
+            },
+            {
+                name: "personal blog (this site!)",
+                date: "2025",
+                med: "website (react)",
+                img: Portfolio,
+                link: "https://kath3rine.github.io/just4fun",
+                desc: "design, code, illustrations, 3d models etc. all from scratch by me"
+            }
+        ],
+    ]
+
+    return (
+        <div>
+            <div id="programming">
+                <Notebook 
+                    title="programming"
+                    pages={items}/>
+            </div>
+        </div>
+    )
+}
+export default Programming;

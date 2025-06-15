@@ -1,24 +1,18 @@
 import React, { useState } from 'react';
 import "../style/Notebook.css"
 
-function Item({item}) {
-    return(
-        <div id="item">
-            <img src={item.img}/>
-            <p id="name">{item.name}</p>
-            <p id="info">
-                {item.date} | {item.med} {item.link ? <a href={item.link}>(link)</a> : ""}
-            </p>
-            <p id="desc">{item.desc}</p>
-        </div>
-    )
-}
-
 function Page({page}) {
     return (
         <div id="page">
             {page.map((item) => (
-                <Item item={item}/>
+                <div id="item">
+                    <img src={item.img}/>
+                    <p id="name">{item.name}</p>
+                    <p id="info">
+                        {item.date} | {item.med} {item.link ? <a href={item.link}>(link)</a> : ""}
+                    </p>
+                    <p id="desc">{item.desc}</p>
+                </div>
             ))}
         </div>
     )

@@ -1,6 +1,6 @@
-import Art from "./pages/Art.js";
-import FilmReel from "./pages/FilmReel.js";
-import Bookshelf from "./pages/Bookshelf.js";
+import Create from "./pages/Create.js";
+import FilmReel from "./components/FilmReel.js";
+import Bookshelf from "./components/Bookshelf.js";
 import React, { useState } from 'react';
 import CreateIcon from "./assets/test.png";
 import WatchIcon from "./assets/test.png";
@@ -18,7 +18,7 @@ function App() {
       <h1>like if letterboxd and deviantart and goodreads had a baby</h1>
       <p>click on an icon above to get started</p>
     </div>,
-    <Art/>,
+    <Create/>,
     <FilmReel/>,
     <Bookshelf/>
   ]

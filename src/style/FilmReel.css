@@ -51,7 +51,21 @@
     border-bottom: 15px white dashed;
   }
 
-/* FILM REEL */
+  .s15 {
+    background-color: var(--s15);
+  }
+
+.s25 {
+  background-color: var(--s25);
+}
+
+.s35 {
+  background-color: var(--s35);
+}
+
+.s45 {
+  background-color: var(--s45);
+}
 
 #reel {
     display: flex;

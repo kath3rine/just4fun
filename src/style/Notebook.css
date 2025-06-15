@@ -7,10 +7,6 @@
         margin-top: 20px;
     }
 
-    a:hover {
-        color: purple;
-    }
-
     p {
         margin: 10px;
     }
@@ -51,11 +47,24 @@
     padding: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    border-left: 30px black solid;
 }
 
 #notebook-content {
     display: flex;
     transition: transform 0.3s ease;
+}
+
+#traditional-art #notebook {
+    background-color: lavender;
+}
+
+#digital-art #notebook {
+    background-color: pink;
+}
+
+#programming #notebook {
+    background-color: aquamarine;
 }
 
 #header {

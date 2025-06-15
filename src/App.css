@@ -43,12 +43,23 @@
   }
 }
 
+#create {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 :root {
-  --s1: pink;
-  --s2: orange;
-  --s3: yellow;
-  --s4: lime;
-  --s5: aqua;
+  --s05: rgb(255, 136, 255);
+  --s1: rgb(255, 135, 155);
+  --s15: rgb(255, 169, 138);
+  --s2: rgb(255, 212, 133);
+  --s25: rgb(255, 221, 135);
+  --s3: rgb(255, 255, 132);
+  --s35: rgb(214, 255, 132);
+  --s4: rgb(138, 255, 138);
+  --s45: rgb(127, 255, 255);
+  --s5: rgb(133, 133, 255);
 }
 
 
