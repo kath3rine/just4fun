@@ -32,7 +32,7 @@ function Film({film, index}) {
 function FilmReel() {
     return(
         <div className="section" id="film-reel">
-            <h1>2025 watches</h1>
+            <h1>my 2025 film reel</h1>
             <p>click each film 2 see my thoughts</p>
             <div id="reel">
                 {Films.map((film, index) => (

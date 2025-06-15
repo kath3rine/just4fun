@@ -1,4 +1,4 @@
-import Notebook from './Notebook.js'
+import Gallery from '../components/Gallery.js'
 import Visualizer from "../assets/art/visualizer.png";
 
 function DigitalArt() {
@@ -16,12 +16,8 @@ function DigitalArt() {
     ]
 
     return (
-        <div>
-            <div id="digital-art">
-                <Notebook 
-                    title="digital"
-                    pages={items}/>
-            </div>
+        <div className="notebook" id="digital-art">
+            <Gallery title="digital" pages={items}/>
         </div>
     )
 }

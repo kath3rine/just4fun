@@ -27,14 +27,20 @@
   flex-direction: row;
   padding-left: 20px;
   position: relative;
-  background-color: #ddd;
+  background-color: var(--s5);
   margin-top: 5px;
   margin-bottom: 20px;
-
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  
   p {
     position: absolute;
     top: 0px;
   }
+}
+
+a:hover {
+  color: var(--s5);
 }
 
 #main {
@@ -50,16 +56,16 @@
 }
 
 :root {
-  --s05: rgb(255, 136, 255);
-  --s1: rgb(255, 135, 155);
-  --s15: rgb(255, 169, 138);
-  --s2: rgb(255, 212, 133);
-  --s25: rgb(255, 221, 135);
-  --s3: rgb(255, 255, 132);
-  --s35: rgb(214, 255, 132);
-  --s4: rgb(138, 255, 138);
-  --s45: rgb(127, 255, 255);
-  --s5: rgb(133, 133, 255);
+  --s05: rgb(250,242,143);
+  --s1: rgb(250,242,143);
+  --s15: #ffd9a4;
+  --s2: #ffd9a4;
+  --s25: #fcd7e9;
+  --s3: #fcd7e9;
+  --s35: #d9c0e7;
+  --s4: #d9c0e7;
+  --s45: #c4e1f6;
+  --s5: #c4e1f6;
 }
 
 

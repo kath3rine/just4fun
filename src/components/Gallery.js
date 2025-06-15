@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../style/Notebook.css"
+import "../style/Gallery.css"
 
 function Page({page}) {
     return (
@@ -7,18 +7,21 @@ function Page({page}) {
             {page.map((item) => (
                 <div id="item">
                     <img src={item.img}/>
-                    <p id="name">{item.name}</p>
-                    <p id="info">
-                        {item.date} | {item.med} {item.link ? <a href={item.link}>(link)</a> : ""}
-                    </p>
-                    <p id="desc">{item.desc}</p>
+                    <div id="item-info">
+                        <p id="name">{item.name}</p>
+                        <p id="info">
+                            {item.date} | {item.med} {item.link ? <a href={item.link}>(link)</a> : ""}
+                        </p>
+                        <p id="desc">{item.desc}</p>
+                    </div>
+                    
                 </div>
             ))}
         </div>
     )
 }
 
-function Notebook({pages, title}) {
+function Gallery({pages, title}) {
     const [idx, setIdx] = useState(0);
 
     const onBack = () => {
@@ -34,7 +37,7 @@ function Notebook({pages, title}) {
     };
     
     return(
-        <div id="notebook">
+        <div id="gallery">
             <div id="header">
                 <h2>{title}</h2>
                 <div id="buttons">
@@ -44,7 +47,7 @@ function Notebook({pages, title}) {
             </div>
             
             <div id="wrapper">
-                <div id="notebook-content" style={contentStyle}>
+                <div id="gallery-content" style={contentStyle}>
                 {pages.map((page, index) => (
                     <div key={index}>
                         <Page page={page}/>
@@ -56,4 +59,4 @@ function Notebook({pages, title}) {
     );
 }
 
-export default Notebook
+export default Gallery

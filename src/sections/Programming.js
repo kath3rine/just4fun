@@ -1,7 +1,8 @@
-import Notebook from './Notebook.js'
+import Gallery from '../components/Gallery.js'
 import Impostar from "../assets/art/impostar.JPG"
 import Portfolio from "../assets/art/portfolio.png";
 import Tinderfy from "../assets/art/tinderfy.png";
+import Test from '../assets/test.png';
 
 function Programming() {
     const items = [
@@ -33,23 +34,26 @@ function Programming() {
                 img: Portfolio,
                 link: "https://kath3rine.github.io"
             },
+            
+        ],
+        [
             {
                 name: "personal blog (this site!)",
                 date: "2025",
                 med: "website (react)",
-                img: Portfolio,
-                link: "https://kath3rine.github.io/just4fun",
-                desc: "design, code, illustrations, 3d models etc. all from scratch by me"
+                img: Test,
+                link: "https://kath3rine.github.io/just4fun"
             }
-        ],
+        ]
     ]
 
     return (
-        <div>
-            <div id="programming">
-                <Notebook 
-                    title="programming"
-                    pages={items}/>
+        <div id='programming'>
+            <h2><a href="https://kath3rine.github.io">
+                full portfolio here
+            </a></h2>
+            <div className="window">
+                <Gallery title="programming.py" pages={items}/>
             </div>
         </div>
     )

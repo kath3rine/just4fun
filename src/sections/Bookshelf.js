@@ -30,7 +30,7 @@ function Book({book, c, index}) {
 function Bookshelf() {
     return (
         <div id="bookshelf">
-            <h1>2025 reads</h1>
+            <h1>my 2025 bookshelf</h1>
             <p>click each book 2 see my thoughts</p>
 
             <div id="shelf">

@@ -1,0 +1,200 @@
+@import "../App.css";
+
+#item {
+    width: 90%;
+    margin-bottom: 20px;
+
+    p {
+        margin: 5px;
+    }
+}
+
+#name {
+    font-weight: bold;
+}
+
+a {
+    color: var(--hi);
+}
+
+#desc {
+    opacity: 0.3;
+    padding: 10px;
+}
+
+#page {
+    
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#wrapper {
+    overflow: hidden;
+}
+
+#gallery {
+    overflow: hidden;
+}
+
+#gallery-content {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    position: relative;
+    padding-bottom: 10px;
+
+    button {
+        border: none;
+        height: 20px;
+        opacity: 0.75;
+        margin: 5px;
+        background-color: white;
+    }
+
+    button:hover {
+        opacity: 1;
+    }
+}
+
+#buttons {
+    position: absolute;
+}
+
+.notebook {
+    #gallery {
+        border-left: 40px black solid;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin: 0px 50px 50px 0px;
+        padding: 20px;
+    }
+
+    #header {
+        h2 {
+            margin: 0px;
+        }
+    }
+
+    #buttons {
+        right: 0;
+    }
+
+    #wrapper {
+        width: 425px;
+    }
+
+    #page {
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        width: 425px;
+        height: 550px;
+        padding: 5%;
+        background-image: url("../assets/whitepaper.jpg");
+    }
+
+    #item {
+        background-color: #f0f0f0;
+        img {
+            height: auto;
+            width: 80%;
+            margin-top: 20px;
+        }
+    }
+
+    #item-info {
+        text-align: center;
+    }
+}
+
+#traditional-art {
+    #gallery {
+        background-color: var(--s2);
+    }
+}
+
+#digital-art {
+    #gallery {
+        background-color: var(--s3);
+    }
+
+    a:hover {
+        color: var(--s3);
+    }
+}
+
+.window {
+    #gallery {
+        width: 800px;
+        padding-bottom: 30px;
+        border-radius: 20px;
+    }
+
+    #header {
+        h2 {
+            margin: 10px 0px 5px 10px;
+        }
+    }
+
+    #buttons {
+        right: 10px;
+        top: 10px;
+    }
+
+    #wrapper {
+        width: 800px;
+    }
+
+    #page {
+        width: 800px;
+        height: 400px;
+        display: flex;
+    }
+
+    #item {
+        background-color: white;
+        width: 100%;
+        display: flex;
+
+        img {
+            height: 80%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: auto;
+            margin-left: 20px;
+        }
+    }
+
+    #item-info {
+        p {
+            margin-left: 20px;
+            margin-right: 10px;
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        margin-top: 5%;
+    }
+
+    #desc {
+        padding-left: 0px;
+    }
+}
+
+#programming {
+    #gallery {
+        background-color: var(--s3);
+    }
+
+    .window a:hover {
+        color: var(--s3);
+    }
+
+    h2 {
+        margin-top: 30px;
+    }
+}
+

@@ -1,4 +1,4 @@
-import Notebook from './Notebook.js'
+import Gallery from '../components/Gallery.js'
 import Face from "../assets/art/face.jpg";
 import Fruit from "../assets/art/fruit.png";
 import Panda from "../assets/art/panda.png";
@@ -18,10 +18,8 @@ function TraditionalArt() {
 
     return (
         <div>
-            <div id="traditional-art">
-                <Notebook 
-                    title="traditional"
-                    pages={items}/>
+            <div className="notebook" id="traditional-art">
+                <Gallery title="traditional" pages={items}/>
             </div>
         </div>
     )
