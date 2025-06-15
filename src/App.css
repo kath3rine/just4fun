@@ -2,34 +2,46 @@
   padding: 20px;
 }
 
+#icon {
+  border: 3px grey solid;
+  margin: 10px;
+  width: 100px;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  position: relative;
+  background-color: #aaa;
+
+  p {
+    position: absolute;
+    top: 10px;
+  }
+
+  img {
+    height: 50px;
+  }
+}
+
+#main {
+  img {
+    height: 300px;
+  }
+}
+
+#menu, #main {
+  margin: 10px;
+}
+
 :root {
-  --s1: red;
+  --s1: pink;
   --s2: orange;
   --s3: yellow;
-  --s4: green;
+  --s4: lime;
   --s5: aqua;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
