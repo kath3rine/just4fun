@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Books from '../data/BookData.json'
+import Books from '../data/BookReviews.json'
 import '../style/Bookshelf.css'
 
 function Book({book, c, index}) {

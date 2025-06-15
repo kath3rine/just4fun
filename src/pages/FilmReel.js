@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Films from "../data/FilmData.json"
+import Films from "../data/FilmReviews.json"
 import "../style/FilmReel.css";
 
 function Film({film, index}) {
@@ -29,7 +29,7 @@ function Film({film, index}) {
     )
 }
 
-function FilmReel() {
+function Watch() {
     return(
         <div className="section" id="film-reel">
             <h1>2025 watches</h1>

@@ -51,8 +51,8 @@ function App() {
                 <p className={index == 0 ? "bold-icon" : "normal-icon"}>{icon.text}</p>
                 <img src={icon.img}/>
             </div>
-            
           ))}
+          <h3><a href="https://kath3rine.github.io/#projects">full technical portfolio</a></h3>
         </div>
 
         <div id="main">
