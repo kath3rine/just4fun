@@ -20,7 +20,7 @@ function Film({film, index}) {
                     </div>
 
                     <div className={film.rating} id="film-back">
-                        <p>{film.date}</p>
+                        <p>watched: {film.date}</p>
                         <p>{film.review}</p>
                     </div>
                 </div>

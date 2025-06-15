@@ -1,12 +1,10 @@
-import TraditionalArt from "./sections/TraditionalArt.js";
-import DigitalArt from "./sections/DigitalArt.js";
-import FilmReel from "./sections/FilmReel.js";
-import Bookshelf from "./sections/Bookshelf.js";
+import Art from "./pages/Art.js";
+import FilmReel from "./pages/FilmReel.js";
+import Bookshelf from "./pages/Bookshelf.js";
 import React, { useState } from 'react';
-import TraditionalArtIcon from "./assets/test.png";
-import DigitalArtIcon from "./assets/test.png";
-import FilmReelIcon from "./assets/test.png";
-import BookshelfIcon from "./assets/test.png";
+import CreateIcon from "./assets/test.png";
+import WatchIcon from "./assets/test.png";
+import ReadIcon from "./assets/test.png";
 
 function App() {
   const [idx, setIdx] = useState(0);
@@ -16,44 +14,49 @@ function App() {
   }  
 
   const pages = [
-    <TraditionalArt/>,
-    <DigitalArt/>,
+    <div>
+      <h1>like if letterboxd and deviantart and goodreads had a baby</h1>
+      <p>click on an icon above to get started</p>
+    </div>,
+    <Art/>,
     <FilmReel/>,
     <Bookshelf/>
   ]
   const icons = [
     {
-      text: "traditional art",
-      img: TraditionalArtIcon
+      text: "kat's scrapbook"
     },
     {
-      text: "digital art",
-      img: DigitalArtIcon
+      text: "create",
+      img: CreateIcon
     },
     {
-      text: "watches",
-      img: FilmReelIcon
+      text: "watch",
+      img: WatchIcon
     },
     {
-      text: "reads",
-      img: BookshelfIcon
+      text: "read",
+      img: ReadIcon
     }
   ]
 
   return (
     <div className="App">
-      <h1>like if letterboxd and deviantart and spotify and goodreads had a baby</h1>
       <div>
         <div id="menu">
           {icons.map((icon, index) => (
-            <div id="icon" key={index} onClick={() => handleChange(index)}>
-                <p>{icon.text}</p>
+            <div id="icon"
+            key={index} 
+            onClick={() => handleChange(index)}>
+                <p className={index == 0 ? "bold-icon" : "normal-icon"}>{icon.text}</p>
                 <img src={icon.img}/>
             </div>
+            
           ))}
         </div>
 
         <div id="main">
+
             <div>{pages[idx]}</div>
         </div>
       </div>

@@ -17,7 +17,7 @@ function Book({book, c, index}) {
             </div>
 
             <div className={book.rating} id="book-inside">
-                <p>{book.date}</p>
+                <p>read: {book.date}</p>
                 <p>{book.review}</p>
             </div>
                 
@@ -30,7 +30,9 @@ function Book({book, c, index}) {
 function Bookshelf() {
     return (
         <div id="bookshelf">
-            <h2>2025 reads</h2>
+            <h1>2025 reads</h1>
+            <p>click each book 2 see my thoughts</p>
+
             <div id="shelf">
                     {Books.map((book, index) => (
                         <div>

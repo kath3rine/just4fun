@@ -1,27 +1,38 @@
 .App {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#art-page {
+  display: flex;
 }
 
 #icon {
-  border: 3px grey solid;
-  margin: 10px;
+  margin: 5px;
   width: 100px;
+  position: relative;
+
+  img {
+    height: 50px;
+  }
+}
+
+.bold-icon {
+  background-color: white;
+  font-weight: bold;
 }
 
 #menu {
   display: flex;
   flex-direction: row;
-  margin: 20px;
+  padding-left: 20px;
   position: relative;
-  background-color: #aaa;
+  background-color: #ddd;
+  margin-top: 5px;
 
   p {
     position: absolute;
-    top: 10px;
-  }
-
-  img {
-    height: 50px;
+    top: 0px;
   }
 }
 
@@ -29,10 +40,6 @@
   img {
     height: 300px;
   }
-}
-
-#menu, #main {
-  margin: 10px;
 }
 
 :root {
