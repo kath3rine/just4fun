@@ -1,13 +1,11 @@
 import FilmReel from "./sections/FilmReel.js";
+import FilmJournal from "./sections/FilmJournal.js";
 import Bookshelf from "./sections/Bookshelf.js";
 import Programming from "./sections/Programming.js";
 import TraditionalArt from './sections/TraditionalArt.js';
 import DigitalArt from './sections/DigitalArt.js';
 import React, { useState } from 'react';
-import CreateIcon from "./assets/test.png";
-import WatchIcon from "./assets/test.png";
-import ReadIcon from "./assets/test.png";
-import CodeIcon from "./assets/test.png";
+import TestIcon from "./assets/art/eye.JPG";
 
 function DefaultHome() {
   return (
@@ -28,14 +26,18 @@ function App() {
 
   const icons = [
     { text: "kat's scrapbook", component: <DefaultHome/> },
-    { text: "create", img: CreateIcon, component: 
+    { text: "create", img: TestIcon, component: 
       <div id="create">
         <TraditionalArt/>
         <DigitalArt/>
       </div> },
-    { text: "watch", img: WatchIcon, component: <FilmReel/>},
-    { text: "read", img: ReadIcon, component: <Bookshelf/> },
-    { text: "code", img: CodeIcon , component: <Programming/>}
+    { text: "watch", img: TestIcon, component: 
+      <div id="create">
+          <FilmReel/>
+          <FilmJournal/>
+        </div> },
+    { text: "read", img: TestIcon, component: <Bookshelf/> },
+    { text: "code", img: TestIcon , component: <Programming/>}
   ]
 
   return (

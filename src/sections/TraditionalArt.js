@@ -8,18 +8,18 @@ import Mixed from "../assets/art/mixed.png";
 
 function TraditionalArt() {
     const items = [
-        [ { date: "2020", med: "colored pencil", img: Face } ],
-        [ { date: "2020", med: "colored pencil", img: Eye } ],
-        [ { date: "2021", med: "acrylic", img: Panda } ],
-        [ { date: "2020", med: "colored pencil + gouache", img: Mixed } ],
-        [ { date: "2020", med: "colored pencil", img: Medal } ],
-        [ { date: "2021", med: "watercolor", img: Fruit } ]
+        { date: "2020 |", med: "colored pencil", img: Face } ,
+        { date: "2020 |", med: "colored pencil", img: Eye } ,
+        { date: "2021 |", med: "acrylic", img: Panda } ,
+        { date: "2020 |", med: "colored pencil + gouache", img: Mixed } ,
+        { date: "2020 |", med: "colored pencil", img: Medal } ,
+        { date: "2021 |", med: "watercolor", img: Fruit } 
     ]
 
     return (
         <div>
             <div className="notebook" id="traditional-art">
-                <Gallery title="traditional" pages={items}/>
+                <Gallery title="traditional" pages={items} num={1}/>
             </div>
         </div>
     )

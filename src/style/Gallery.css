@@ -22,12 +22,6 @@ a {
     padding: 10px;
 }
 
-#page {
-    
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
 #wrapper {
     overflow: hidden;
 }
@@ -45,7 +39,6 @@ a {
     width: 100%;
     display: flex;
     position: relative;
-    padding-bottom: 10px;
 
     button {
         border: none;
@@ -77,6 +70,7 @@ a {
         h2 {
             margin: 0px;
         }
+        padding-bottom: 10px;
     }
 
     #buttons {
@@ -102,6 +96,8 @@ a {
             height: auto;
             width: 80%;
             margin-top: 20px;
+            margin-left: 10%;
+            margin-right: 10%;
         }
     }
 
@@ -137,6 +133,7 @@ a {
         h2 {
             margin: 10px 0px 5px 10px;
         }
+        padding-bottom: 10px;
     }
 
     #buttons {
@@ -151,6 +148,8 @@ a {
     #page {
         width: 800px;
         height: 400px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
         display: flex;
     }
 
@@ -198,3 +197,43 @@ a {
     }
 }
 
+.reel {
+    #gallery {
+        background-color: black;
+    }
+    #wrapper {
+        width: 800px;
+    }
+
+    #page {
+        width: 400px;
+        height: 500px;
+        padding-top: 20px;
+        margin-bottom: 30px;
+        background-color: black;
+        border-top: 20px white dashed;
+        border-bottom: 20px white dashed;
+    }
+
+    #item {
+        background-color: rgb(241, 242, 240);
+        width: 100%;
+        margin: 10px;
+        height: 460px;
+
+        img {
+            height: auto;
+            width: 80%;
+            margin: 0px 10% 0px 10%;
+        }
+    }
+
+    #item-info {
+        text-align: center;
+    }
+
+    #buttons {
+        align-items: center;
+        margin-top: 5px;
+    }
+}

@@ -4,24 +4,21 @@ import "../style/Gallery.css"
 function Page({page}) {
     return (
         <div id="page">
-            {page.map((item) => (
-                <div id="item">
-                    <img src={item.img}/>
-                    <div id="item-info">
-                        <p id="name">{item.name}</p>
-                        <p id="info">
-                            {item.date} | {item.med} {item.link ? <a href={item.link}>(link)</a> : ""}
-                        </p>
-                        <p id="desc">{item.desc}</p>
-                    </div>
-                    
+            <div id="item">
+                <img src={page.img}/>
+                <div id="item-info">
+                    <p id="name">{page.name}</p>
+                    <p id="info">
+                        {page.date} {page.med} {page.link ? <a href={page.link}>(link)</a> : ""}
+                    </p>
+                    <p id="desc">{page.desc}</p>
                 </div>
-            ))}
+            </div>
         </div>
     )
 }
 
-function Gallery({pages, title}) {
+function Gallery({pages, title, num}) {
     const [idx, setIdx] = useState(0);
 
     const onBack = () => {
@@ -32,8 +29,8 @@ function Gallery({pages, title}) {
         setIdx((prev) => Math.min(prev + 1, pages.length - 1));
     };
 
-    const contentStyle = {
-        transform: `translateX(-${idx * 100}%)`,
+    const sliding = {
+        transform: `translateX(-${idx * (100 / num)}%)`,
     };
     
     return(
@@ -47,7 +44,7 @@ function Gallery({pages, title}) {
             </div>
             
             <div id="wrapper">
-                <div id="gallery-content" style={contentStyle}>
+                <div id="gallery-content" style={sliding}>
                 {pages.map((page, index) => (
                     <div key={index}>
                         <Page page={page}/>
