@@ -1,8 +1,8 @@
 @import "../App.css";
 
 .film {
-    height: 125px;
-    width: 175px;
+    height: 165px;
+    width: 170px;
     position: relative;
     cursor: pointer;
     perspective: 1000px;
@@ -16,13 +16,29 @@
     backface-visibility: hidden;
     transition: transform 0.5s;
     justify-content: center;
-    align-items: center;
     border-radius: 10px;
     padding: 10px;
+    
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      margin-top: 0px;
+    }
   }
 
   #film-front {
     text-align: center;
+    font-weight: bold;
+
+    img {
+      margin-top: 5px;
+      width: 90%;
+      height: 85%;
+      opacity: 0.75;
+      border-radius: 10px;
+    }
   }
   
   #film-back {
@@ -39,17 +55,17 @@
     transform: rotateX(360deg);
   }
 
+  #wrapper2 {
+    height: 225px;
+    border-top: 15px white dashed;
+    border-bottom: 15px white dashed;
+  }
+
   #wrapper1 {
     background-color: black;
     padding-top: 15px;
-    height: 250px;
+    height: 275px;
     margin-bottom: 30px;
-  }
-
-  #wrapper2 {
-    height: 195px;
-    border-top: 15px white dashed;
-    border-bottom: 15px white dashed;
   }
 
 #reel {

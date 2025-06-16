@@ -1,5 +1,6 @@
 import FilmReel from "./sections/FilmReel.js";
 import FilmJournal from "./sections/FilmJournal.js";
+import Playlist25 from "./sections/Playlist25.js";
 import Bookshelf from "./sections/Bookshelf.js";
 import Programming from "./sections/Programming.js";
 import TraditionalArt from './sections/TraditionalArt.js';
@@ -37,7 +38,8 @@ function App() {
           <FilmJournal/>
         </div> },
     { text: "read", img: TestIcon, component: <Bookshelf/> },
-    { text: "code", img: TestIcon , component: <Programming/>}
+    { text: "code", img: TestIcon , component: <Programming/>},
+    { text: "listen", img: TestIcon , component: <Playlist25/>}
   ]
 
   return (

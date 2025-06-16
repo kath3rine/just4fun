@@ -1,7 +1,20 @@
-import Gallery from '../components/Gallery.js';
+import "../style/FilmJournal.css"
 import THOHH from '../assets/journal/thohh.png'
 import BlackSwan from '../assets/journal/blackswan.png'
 import DOS from '../assets/journal/500dos.png'
+
+function FilmCollage({film}) {
+    return(
+        <div id="film-collage">
+            <div id="wrapper">
+            <div id="film-item">
+                <img src={film.img}/>
+                <p>{film.name}</p>
+            </div>
+            </div>
+        </div>
+    )
+}
 
 function FilmJournal() {
     const items = [
@@ -11,9 +24,13 @@ function FilmJournal() {
     ]
 
     return (
-        <div className="reel" id="film-journal">
-            <h2>some of my favorite films / shows </h2>
-            <Gallery pages={items} num={2}/>
+        <div id="film-journal">
+            <h2> my letterboxd top {items.length} collages </h2>
+            <div id="film-journal-content">
+                {items.map((film) => (
+                    <FilmCollage film={film}/>
+                ))}
+            </div>
         </div>
     )
 }

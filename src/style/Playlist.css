@@ -1,0 +1,27 @@
+#playlist {
+    width: 400px;
+    background-color: rgb(30, 30, 30);
+    border-left: 10px black solid;
+    border-right: 10px black solid;
+    border-top: 40px black solid;
+    border-bottom: 40px black solid;
+    border-radius: 20px;
+
+    h2 {
+        margin: 10px;
+        color: white;
+    }
+}
+
+#song {
+    p {
+        color: #bbb;
+        margin: 0px 0px 0px 10px;
+    }
+
+    iframe {
+        border: none;
+        width: 100%;
+        height: 80px;
+    }
+}

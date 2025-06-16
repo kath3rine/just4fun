@@ -4,18 +4,21 @@
         "date": "2/13",
         "rating": "s2",
         "genre": "drama",
+        "img": "https://upload.wikimedia.org/wikipedia/en/1/11/Aftersun.jpg",
         "review": "felt more like a montage than a film with an actual plot"
     },
     {
         "title": "anora",
         "date": "3/21",
         "rating": "s3",
+        "img": "https://upload.wikimedia.org/wikipedia/en/2/2b/Anora_%282024_film%29_poster.jpg",
         "genre": "drama"
     },
     {
         "title": "bottoms",
         "date": "3/23",
         "rating": "s4",
+        "img": "https://upload.wikimedia.org/wikipedia/en/d/db/Bottoms_poster.jpeg",
         "review": "booksmart's awkward gay cousin"
     },
     {
@@ -23,6 +26,7 @@
         "date": "6/5",
         "rating": "s35",
         "genre": "drama",
+        "img": "https://upload.wikimedia.org/wikipedia/en/3/38/Shiva_Baby_film_poster.png",
         "review": "extra half-point for dianna agron"
     },
     {
@@ -30,6 +34,7 @@
         "date": "6/6",
         "rating": "s45",
         "genre": "mystery",
+        "img": "https://upload.wikimedia.org/wikipedia/en/7/7f/Bodies_Bodies_Bodies_%28poster%29.jpeg",
         "review": "good watch. tense w/ a little bit of gen-z humor"
     },
     {
@@ -37,12 +42,14 @@
         "date": "6/6",
         "rating": "s25",
         "genre": "drama",
+        "img": "https://upload.wikimedia.org/wikipedia/en/c/c0/Chungking_Express.jpg",
         "review": "could not bring myself to care"
     },
     {
         "title": "fallen angels",
         "date": "6/7",
         "rating": "s35",
+        "img": "https://upload.wikimedia.org/wikipedia/en/0/04/Fallen-Angels-Poster.jpg",
         "genre": "drama"
     },
     {
@@ -50,6 +57,7 @@
         "date": "6/14",
         "rating": "s25",
         "genre": "mystery",
+        "img": "https://upload.wikimedia.org/wikipedia/en/f/fd/Blue_Velvet_%281986%29.png",
         "review": "wtf (derogatory)"
     }
 ]

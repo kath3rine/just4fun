@@ -14,13 +14,12 @@ function Film({film, index}) {
             <div id="wrapper2">
                 <div className={`film ${isFlipped ? 'flipped' : ''}`} onClick={handleClick}>
                     <div className={film.rating} id="film-front">
-                        <p>{index + 1}</p>
-                        <h2>{film.title}</h2>
-                        
+                        <img src={film.img}/>
+                        <p>{film.title}</p>
                     </div>
 
                     <div className={film.rating} id="film-back">
-                        <p>watched: {film.date}</p>
+                        <p id="details">#{index + 1} | {film.date}</p>
                         <p>{film.review}</p>
                     </div>
                 </div>
