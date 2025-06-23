@@ -24,7 +24,7 @@ function App() {
       </div>
     },
     { 
-      path: "/just4fun/create", title: "create",
+      path: "/j4f-create", title: "create",
       element: 
       <div id="create-page" className='page'>
         <TraditionalArt/>
@@ -32,7 +32,7 @@ function App() {
       </div>
     },
     { 
-      path: "/just4fun/watch", title: "watch",
+      path: "/j4f-watch", title: "watch",
       element: 
       <div id="watch-page" className='page'>
         <FilmReel/>
@@ -41,21 +41,21 @@ function App() {
       </div>
     },
     { 
-      path: "/just4fun/listen", title: "listen",
+      path: "/j4f-listen", title: "listen",
       element: 
       <div id="listen" className='page'>
         <Playlist25/>
       </div>
     },
     { 
-      path: "/just4fun/read", title: "read",
+      path: "/j4f-read", title: "read",
       element: 
       <div id="read-page" className='page'>
         <Bookshelf/>
       </div>
     },
     {  
-      path: "/just4fun/code", title: "code",
+      path: "/j4f-code", title: "code",
       element: 
       <div id="code-page" className='page'>
         <Programming/>
