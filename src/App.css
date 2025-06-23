@@ -10,9 +10,15 @@ h2 a:hover {
   color: var(--s3);
 }
 
-h3 {
-  margin-top: 5px;
-  margin-bottom: 5px;
+#home-page {
+  h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  h3 a:hover {
+    color: white;
+  }
 }
 
 nav {
