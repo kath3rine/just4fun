@@ -8,9 +8,8 @@ import Bookshelf from './sections/Bookshelf.js'
 import Programming from "./sections/Programming.js";
 import Playlist25 from './sections/Playlist25.js';
 import Favorites from './sections/Favorites.js'
-import Lists from './components/Lists.js'
 import FilmLists from './data/FilmLists.json'
-
+import Notes from './components/Notes.js'
 
 function App() {
   const items = [
@@ -38,7 +37,7 @@ function App() {
       <div id="watch-page" className='page'>
         <FilmReel/>
         <FilmJournal/>
-        <Lists lists={FilmLists}/>
+        <Notes notes={FilmLists}/>
       </div>
     },
     { 

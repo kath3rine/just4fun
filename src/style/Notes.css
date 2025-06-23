@@ -1,0 +1,36 @@
+#note {
+    width: 300px;
+}
+
+#note-header {
+    background-image: url('../assets/whitepaper.jpg');
+    display: flex;
+    text-align: center;
+
+    button {
+        height: 30px;
+        width: 30px;
+        margin: 15px;
+    }
+}
+
+#note-content {
+    background-color: #eee;
+
+    li {
+        padding: 5px;
+    }
+}
+
+#note-header, #note-content {
+    padding: 10px;
+}
+
+#notes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px #bbb solid;
+}
+

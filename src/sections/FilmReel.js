@@ -4,6 +4,10 @@ import Movies from "../data/MovieReviews.json"
 import TV from '../data/TVReviews.json'
 import RatingBar from '../components/RatingBar';
 import "../style/FilmReel.css";
+import Note from '../components/Notes.js'
+import GenreChart from '../components/GenreChart';
+import RatingChart from '../components/RatingChart';
+import StackedTimelineChart from '../components/StackedTimelineChart';
 
 function Film({film, index}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -35,97 +39,9 @@ function Film({film, index}) {
     )
 }
 
-function GenreChart({palette}) {
-    const fltr2 = (l1, l2, genre) => {
-        return (l1.filter(x => x.genre == genre).length + l2.filter(x => x.genre == genre).length);
-    } 
-    
-    const genresLst = ["comedy", "drama", "romance", "horror", "mystery"]
-    const data = []
-    for (let i = 0; i < genresLst.length; i++) {
-        data[i] = {
-            name: genresLst[i], value: fltr2(Movies, TV, genresLst[i])
-        }
-    }
-
-    return(
-        <div id="genre-chart">
-            <h3>genre breakdown</h3>
-            <PieChart className='film-chart' height={300} width={400}>
-                <Pie data={data} cx="50%" cy="50%" outerRadius={80} dataKey="value">
-                    {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={palette[index % palette.length]} />
-                    ))}
-                </Pie>
-                <Tooltip />
-                <Legend />
-            </PieChart>
-        </div>
-    )
-}
-
-function TimelineChart({palette}) {
-    const fltr = (lst, month)  => {
-        return lst.filter(x => x.month == month).length;
-    }
-
-    const data = []
-    for (let i = 1; i < 7; i++) {
-        data[i - 1] = {
-            name: i.toString(),
-            shows: fltr(TV, i),
-            movies: fltr(Movies, i)
-        }
-    }
-
-    return(
-        <div id="timeline-chart">
-            <h3># of shows + movies watched each month</h3>
-            <BarChart width={400} height={300} data={data}>
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="shows" stackId="a" fill={palette[3]} />
-                <Bar dataKey="movies" stackId="a" fill={palette[4]} />
-            </BarChart>
-        </div>
-    )
-}
-
-function RatingChart({palette}) {
-    const fltr2 = (l1, l2, rating) => {
-        return (l1.filter(x => x.rating == rating).length + l2.filter(x => x.rating == rating).length);
-    } 
-
-    const ratings = ["s1", "s2", "s3", "s4", "s5"]
-    const data = []
-    for(let i = 1; i <= 5; i++) {
-        data[i - 1] = {
-            name: i.toString(),
-            value: fltr2(Movies, TV, ratings[i - 1])
-        }
-    }
-
-    return(
-        <div>
-            <h3># of shows / movies with each rating</h3>
-            <BarChart width={400} height={285} data={data}>
-                <XAxis datakey="name"/>
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="value" >
-                    {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={palette[index % palette.length]} />
-                    ))}
-                </Bar>
-            </BarChart>
-        </div>
-    )
-}
-
 function FilmReel() {
-    const COLORS = ['rgb(242, 237, 165)', '#ffd9a4', '#fcd7e9', '#debef6', "#c4e1f6"];
+    const films = [...Movies, ...TV]
+    const COLORS = ['rgb(242, 237, 165)', '#ffd9a4', '#fcd7e9', '#debef6', "#c4e1f6", "#ddd"];
     return(
         <div className="section" id="film-reel">
             <h1>my 2025 film reel</h1>
@@ -146,9 +62,14 @@ function FilmReel() {
             
             <h2>stats</h2>
             <div id="film-charts">
-                <GenreChart palette={COLORS}/>
-                <TimelineChart palette={COLORS}/>
-                <RatingChart palette={COLORS}/>
+                <GenreChart palette={COLORS} lst={films}
+                    w={400} h={300}/>
+                <StackedTimelineChart palette={COLORS} lst1={Movies} lst2={TV}
+                    w={400} h={300}
+                    title="# of shows + movies watched per month"/>
+                <RatingChart palette={COLORS} lst={films}
+                w={400} h={285}
+                title="ratings vs # of shows/movies" />
             </div>
             
         </div>

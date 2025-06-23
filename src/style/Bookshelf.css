@@ -71,6 +71,7 @@
     flex-wrap: wrap;
     width: 480px;
     border: 10px var(--lt-brown) solid;
+    margin-right: 30px;
 
     .s1, .s2, .s3, .s4, .s5 {
         border-radius: 20px;
@@ -96,4 +97,9 @@
     .s5 {
         height: 280px;
     }
+}
+
+#bookshelf-content, #charts2 {
+    display: flex;
+    margin-bottom: 10px;
 }
