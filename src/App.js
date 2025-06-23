@@ -15,7 +15,7 @@ import FilmLists from './data/FilmLists.json'
 function App() {
   const items = [
     { 
-      path: "/", title: "home",
+      path: "/just4fun", title: "home",
       element: 
       <div id="home-page" className='page'>
         <h1>kat's dumpster</h1>
@@ -24,7 +24,7 @@ function App() {
       </div>
     },
     { 
-      path: "/create", title: "create",
+      path: "/just4fun/create", title: "create",
       element: 
       <div id="create-page" className='page'>
         <TraditionalArt/>
@@ -32,7 +32,7 @@ function App() {
       </div>
     },
     { 
-      path: "/watch", title: "watch",
+      path: "/just4fun/watch", title: "watch",
       element: 
       <div id="watch-page" className='page'>
         <FilmReel/>
@@ -41,21 +41,21 @@ function App() {
       </div>
     },
     { 
-      path: "/listen", title: "listen",
+      path: "/just4fun/listen", title: "listen",
       element: 
       <div id="listen" className='page'>
         <Playlist25/>
       </div>
     },
     { 
-      path: "/read", title: "read",
+      path: "/just4fun/read", title: "read",
       element: 
       <div id="read-page" className='page'>
         <Bookshelf/>
       </div>
     },
     {  
-      path: "/code", title: "code",
+      path: "/just4fun/code", title: "code",
       element: 
       <div id="code-page" className='page'>
         <Programming/>
