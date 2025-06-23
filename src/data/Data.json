@@ -1,0 +1,26 @@
+[
+    {
+        "gender": "M",
+        "meeting": "hinge",
+        "month": 3,
+        "age": 22,
+        "location": "bar",
+        "freq": 1
+    },
+    {
+        "gender": "F",
+        "meeting": "tinder",
+        "month": 3,
+        "age": 21,
+        "location": "restaurant",
+        "freq": 1
+    },
+    {
+        "gender": "M",
+        "meeting": "hinge",
+        "month": 6,
+        "age": 21,
+        "location": "activity",
+        "freq": 1
+    }
+]

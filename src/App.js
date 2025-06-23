@@ -10,6 +10,7 @@ import Playlist25 from './sections/Playlist25.js';
 import Favorites from './sections/Favorites.js'
 import FilmLists from './data/FilmLists.json'
 import Notes from './components/Notes.js'
+import Shhh from './sections/Shhh.js';
 
 function App() {
   const items = [

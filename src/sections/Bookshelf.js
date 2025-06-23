@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Books from '../data/BookReviews.json'
 import '../style/Bookshelf.css'
 import RatingBar from '../components/RatingBar';
-import RatingChart from '../components/RatingChart';
-import GenreChart from '../components/GenreChart';
-import TimelineChart from '../components/TimelineChart';
+import RatingChart from '../charts/RatingChart';
+import GenreChart from '../charts/GenreChart';
+import TimelineChart from '../charts/TimelineChart';
 
 function Book({book, c, index}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -50,13 +50,14 @@ function Bookshelf() {
                 </div>
                 <div id="charts">
                     <GenreChart palette={COLORS} lst={Books}
-                        w={600} h={200}/>
+                        w={600} h={200} field="genre"
+                        keys={["sci-fi", "drama", "romance", "horror", "mystery"]}/>
                     <div id="charts2">
                         <RatingChart palette={COLORS} lst={Books}
                             w={350} h={200} 
                             title="ratings vs # of books"/>
                         <TimelineChart palette={COLORS} lst={Books} id="book-timeline"
-                            w={350} h={200}
+                            w={350} h={200} field="pages"
                             title="# of pages read each month"/>
                     </div>
                 </div>

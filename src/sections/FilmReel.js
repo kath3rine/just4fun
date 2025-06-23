@@ -5,9 +5,9 @@ import TV from '../data/TVReviews.json'
 import RatingBar from '../components/RatingBar';
 import "../style/FilmReel.css";
 import Note from '../components/Notes.js'
-import GenreChart from '../components/GenreChart';
-import RatingChart from '../components/RatingChart';
-import StackedTimelineChart from '../components/StackedTimelineChart';
+import GenreChart from '../charts/GenreChart.js';
+import RatingChart from '../charts/RatingChart.js';
+import StackedTimelineChart from '../charts/StackedTimelineChart.js';
 
 function Film({film, index}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -63,13 +63,16 @@ function FilmReel() {
             <h2>stats</h2>
             <div id="film-charts">
                 <GenreChart palette={COLORS} lst={films}
-                    w={400} h={300}/>
+                    w={330} h={300} field="genre"
+                    keys={["comedy", "drama", "romance", "horror", "mystery"]}/>
                 <StackedTimelineChart palette={COLORS} lst1={Movies} lst2={TV}
-                    w={400} h={300}
-                    title="# of shows + movies watched per month"/>
+                    w={330} h={300} field="month"
+                    title="# of shows/movies watched each month"/>
                 <RatingChart palette={COLORS} lst={films}
-                w={400} h={285}
+                w={330} h={285}
                 title="ratings vs # of shows/movies" />
+                <StackedTimelineChart palette={COLORS} lst1={Movies} lst2={TV}
+                    w={330} h={300} field="decade" title="decade released vs # of shows/movies"/>
             </div>
             
         </div>

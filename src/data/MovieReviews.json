@@ -5,6 +5,7 @@
         "month": 2,
         "rating": "s2",
         "genre": "drama",
+        "decade": "20s",
         "img": "https://upload.wikimedia.org/wikipedia/en/1/11/Aftersun.jpg",
         "review": "felt more like a montage than a film with an actual plot"
     },
@@ -14,7 +15,8 @@
         "month": 3,
         "rating": "s3",
         "img": "https://upload.wikimedia.org/wikipedia/en/2/2b/Anora_%282024_film%29_poster.jpg",
-        "genre": "drama"
+        "genre": "drama",
+        "decade": "20s"
     },
     {
         "title": "bottoms",
@@ -22,6 +24,7 @@
         "month": 3,
         "rating": "s4",
         "genre": "comedy",
+        "decade": "20s",
         "img": "https://upload.wikimedia.org/wikipedia/en/d/db/Bottoms_poster.jpeg",
         "review": "booksmart's awkward gay cousin"
     },
@@ -31,6 +34,7 @@
         "month": 6,
         "rating": "s3",
         "genre": "comedy",
+        "decade": "20s",
         "img": "https://upload.wikimedia.org/wikipedia/en/3/38/Shiva_Baby_film_poster.png",
         "review": "extra half-point for dianna agron"
     },
@@ -40,6 +44,7 @@
         "month": 6,
         "rating": "s4",
         "genre": "mystery",
+        "decade": "20s",
         "img": "https://upload.wikimedia.org/wikipedia/en/7/7f/Bodies_Bodies_Bodies_%28poster%29.jpeg",
         "review": "good watch. tense w/ a little bit of gen-z humor"
     },
@@ -49,6 +54,7 @@
         "month": 6,
         "rating": "s3",
         "genre": "romance",
+        "decade": "90s",
         "img": "https://a.ltrbxd.com/resized/film-poster/4/5/6/0/2/45602-chungking-express-0-1000-0-1500-crop.jpg?v=9475abb05b",
         "review": "could not bring myself to care"
     },
@@ -57,6 +63,7 @@
         "date": "6/7",
         "month": 6,
         "rating": "s3",
+        "decade": "90s",
         "img": "https://upload.wikimedia.org/wikipedia/en/0/04/Fallen-Angels-Poster.jpg",
         "genre": "romance"
     },
@@ -66,6 +73,7 @@
         "month": 6,
         "rating": "s3",
         "genre": "mystery",
+        "decade": "80s",
         "img": "https://upload.wikimedia.org/wikipedia/en/f/fd/Blue_Velvet_%281986%29.png",
         "review": "wtf (derogatory)"
     },
@@ -75,6 +83,7 @@
         "month": 6,
         "rating": "s4",
         "genre": "romance",
+        "decade": "00s",
         "img": "https://a.ltrbxd.com/resized/film-poster/3/9/7/1/1/39711-saving-face-0-1000-0-1500-crop.jpg?v=cc366a685a",
         "review": "cute"
     }

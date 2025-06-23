@@ -24,6 +24,7 @@
 
 #note-header, #note-content {
     padding: 10px;
+    border-radius: 10px;
 }
 
 #notes {
