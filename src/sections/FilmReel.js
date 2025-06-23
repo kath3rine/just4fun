@@ -31,7 +31,11 @@ function Film({film, index}) {
                     </div>
 
                     <div className={film.rating} id="film-back">
-                        <p id="details">#{index + 1} | watched on {film.date} {film.seasons ? <span> | {film.seasons} seasons</span> : <p></p>}</p>
+                        <p id="details">#{index + 1} - {film.date} - {film.genre} {
+                            film.seasons 
+                            ? <span> - {film.seasons} seasons</span> 
+                            : <p></p>} 
+                        </p>
                         <p id="review">{film.review}</p>
                     </div>
                 </div>

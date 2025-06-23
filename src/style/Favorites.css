@@ -1,4 +1,31 @@
 #favorites {
     border-top: 1px #ddd solid;
-    margin-top: 50px;
+    margin-top: 30px;
+}
+
+#favorite-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#favorite {
+    iframe {
+        height: 400px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    iframe, img {
+        opacity: 0.8;
+        border-radius: 10px;
+    }
+
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    margin: 10px 10px 10px 0px;
+    text-align: center;
+    border-radius: 10px;
 }

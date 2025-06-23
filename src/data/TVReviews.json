@@ -5,6 +5,7 @@
         "rating": "s4",
         "genre": "drama",
         "seasons": 1,
+        "review": "a lot less boring than it sounds like it should be",
         "img": "https://a.ltrbxd.com/resized/film-poster/1/0/7/4/9/8/3/1074983-lessons-in-chemistry-0-1000-0-1500-crop.jpg?v=15830ec867"
     },
     {
@@ -28,6 +29,7 @@
         "date": "6/12",
         "rating": "s4",
         "seasons": 1,
+        "review": "a little slow / not as gripping as i'd like",
         "img": "https://a.ltrbxd.com/resized/film-poster/3/8/4/5/5/7/384557-twin-peaks-0-1000-0-1500-crop.jpg?v=dd1938c1f2",
         "genre": "mystery"
     }

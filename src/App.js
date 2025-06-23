@@ -18,13 +18,14 @@ function App() {
       path: "/", title: "home",
       element: 
       <div id="home-page" className='page'>
-        <h1>kat's dumpster</h1>
-        <h3>a website 4 things i like 2 do</h3>
+        <h1>my dumpster</h1>
+        <h3>a website 4 things i like 2 do - click a link above 2 get started</h3>
         <h3>like if deviantart and letterboxd and spotify and goodreads and github had a baby </h3>
+        <Favorites/>
       </div>
     },
     { 
-      path: "/create", title: "create",
+      path: "/create", title: "create 🎨",
       element: 
       <div id="create-page" className='page'>
         <TraditionalArt/>
@@ -32,7 +33,7 @@ function App() {
       </div>
     },
     { 
-      path: "/watch", title: "watch",
+      path: "/watch", title: "watch 👀",
       element: 
       <div id="watch-page" className='page'>
         <FilmReel/>
@@ -41,21 +42,21 @@ function App() {
       </div>
     },
     { 
-      path: "/listen", title: "listen",
+      path: "/listen", title: "listen 🎧",
       element: 
       <div id="listen" className='page'>
         <Playlist25/>
       </div>
     },
     { 
-      path: "/read", title: "read",
+      path: "/read", title: "read 📚",
       element: 
       <div id="read-page" className='page'>
         <Bookshelf/>
       </div>
     },
     {  
-      path: "/code", title: "code",
+      path: "/code", title: "code 💻",
       element: 
       <div id="code-page" className='page'>
         <Programming/>

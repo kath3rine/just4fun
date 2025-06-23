@@ -3,11 +3,16 @@
 }
 
 h1 {
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 h2 a:hover {
   color: var(--s3);
+}
+
+h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 nav {
@@ -34,11 +39,11 @@ nav {
 }
 
 .page {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 :root {
-  --s1: rgb(250,242,143);
+  --s1: rgb(242, 237, 165);
   --s2: #ffd9a4;
   --s3: #fcd7e9;
   --s4: #debef6;
