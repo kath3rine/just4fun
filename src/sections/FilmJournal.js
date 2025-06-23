@@ -24,7 +24,7 @@ function FilmJournal() {
     ]
 
     return (
-        <div id="film-journal">
+        <div className="section" id="film-journal">
             <h2> my letterboxd top {items.length} collages </h2>
             <div id="film-journal-content">
                 {items.map((film) => (

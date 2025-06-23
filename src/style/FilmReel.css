@@ -1,8 +1,16 @@
 @import "../App.css";
 
+
+#review {
+  opacity: 0.5;
+}
+
+#tv-reel .film {
+  width: (100 * 2)px;
+}
+
 .film {
     height: 165px;
-    width: 170px;
     position: relative;
     cursor: pointer;
     perspective: 1000px;
@@ -18,10 +26,7 @@
     justify-content: center;
     border-radius: 10px;
     padding: 10px;
-    
-    h3 {
-      margin: 0;
-    }
+    text-wrap: wrap;
 
     p {
       margin-top: 0px;
@@ -29,13 +34,11 @@
   }
 
   #film-front {
-    text-align: center;
     font-weight: bold;
 
     img {
-      margin-top: 5px;
-      width: 90%;
-      height: 85%;
+      width: 105px;
+      height: 130px;
       opacity: 0.75;
       border-radius: 10px;
     }
@@ -68,7 +71,11 @@
     margin-bottom: 30px;
   }
 
-#reel {
+.reel {
     display: flex;
     flex-wrap: wrap;
+}
+
+#film-title {
+  text-align: center;
 }

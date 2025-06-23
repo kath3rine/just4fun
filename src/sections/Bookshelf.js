@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Books from '../data/BookReviews.json'
 import '../style/Bookshelf.css'
+import RatingBar from '../components/RatingBar';
 
 function Book({book, c, index}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -17,8 +18,8 @@ function Book({book, c, index}) {
             </div>
 
             <div className={book.rating} id="book-inside">
-                <p>read: {book.date}</p>
-                <p>{book.review}</p>
+                <p>read on: {book.date}</p>
+                <p id="review">{book.review}</p>
             </div>
                 
             </div>
@@ -31,8 +32,7 @@ function Bookshelf() {
     return (
         <div id="bookshelf">
             <h1>my 2025 bookshelf</h1>
-            <p>click each book 2 see my thoughts</p>
-
+            <RatingBar/>
             <div id="shelf">
                     {Books.map((book, index) => (
                         <div>

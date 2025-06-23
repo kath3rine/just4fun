@@ -1,65 +1,82 @@
-import FilmReel from "./sections/FilmReel.js";
-import FilmJournal from "./sections/FilmJournal.js";
-import Playlist25 from "./sections/Playlist25.js";
-import Bookshelf from "./sections/Bookshelf.js";
-import Programming from "./sections/Programming.js";
+import React from 'react';
+import { BrowserRouter, Route, Routes, Link } from 'react-router';
 import TraditionalArt from './sections/TraditionalArt.js';
 import DigitalArt from './sections/DigitalArt.js';
-import React, { useState } from 'react';
-import TestIcon from "./assets/art/eye.JPG";
+import FilmJournal from './sections/FilmJournal.js';
+import FilmReel from './sections/FilmReel.js'
+import Bookshelf from './sections/Bookshelf.js'
+import Programming from "./sections/Programming.js";
+import Playlist25 from './sections/Playlist25.js';
+import Favorites from './sections/Favorites.js'
+import Lists from './components/Lists.js'
+import FilmLists from './data/FilmLists.json'
 
-function DefaultHome() {
-  return (
-    <div>
-      <h1>a website 4 things i like 2 do</h1>
-      <h3>like if letterboxd and deviantart and goodreads and github had a baby</h3>
-      <p>click on an icon above to get started</p>
-    </div>
-  )
-}
 
 function App() {
-  const [idx, setIdx] = useState(0);
-
-  const handleChange = (newIndex) => {
-      setIdx(newIndex);
-  } 
-
-  const icons = [
-    { text: "kat's scrapbook", component: <DefaultHome/> },
-    { text: "create", img: TestIcon, component: 
-      <div id="create">
+  const items = [
+    { 
+      path: "/", title: "home",
+      element: 
+      <div id="home-page" className='page'>
+        <h1>kat's dumpster</h1>
+        <h3>a website 4 things i like 2 do</h3>
+        <h3>like if deviantart and letterboxd and spotify and goodreads and github had a baby </h3>
+      </div>
+    },
+    { 
+      path: "/create", title: "create",
+      element: 
+      <div id="create-page" className='page'>
         <TraditionalArt/>
         <DigitalArt/>
-      </div> },
-    { text: "watch", img: TestIcon, component: 
-      <div id="create">
-          <FilmReel/>
-          <FilmJournal/>
-        </div> },
-    { text: "read", img: TestIcon, component: <Bookshelf/> },
-    { text: "code", img: TestIcon , component: <Programming/>},
-    { text: "listen", img: TestIcon , component: <Playlist25/>}
+      </div>
+    },
+    { 
+      path: "/watch", title: "watch",
+      element: 
+      <div id="watch-page" className='page'>
+        <FilmReel/>
+        <FilmJournal/>
+        <Lists lists={FilmLists}/>
+      </div>
+    },
+    { 
+      path: "/listen", title: "listen",
+      element: 
+      <div id="listen" className='page'>
+        <Playlist25/>
+      </div>
+    },
+    { 
+      path: "/read", title: "read",
+      element: 
+      <div id="read-page" className='page'>
+        <Bookshelf/>
+      </div>
+    },
+    {  
+      path: "/code", title: "code",
+      element: 
+      <div id="code-page" className='page'>
+        <Programming/>
+      </div>
+    }
   ]
 
   return (
     <div className="App">
-      <div>
-        <div id="menu">
-          {icons.map((icon, index) => (
-            <div id="icon"
-            key={index} 
-            onClick={() => handleChange(index)}>
-                <p className={index == 0 ? "bold-icon" : "normal-icon"}>{icon.text}</p>
-                <img src={icon.img}/>
-            </div>
+      <BrowserRouter>
+        <nav>
+          {items.map((item) => (
+            <Link className="menu-item" id={item.title} to={item.path}>{item.title}</Link>
           ))}
-        </div>
-
-        <div id="main">
-            <div>{icons[idx].component}</div>
-        </div>
-      </div>
+        </nav>
+        <Routes>
+          {items.map((item) => (
+            <Route path={item.path} element={item.element}/>
+          ))}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
