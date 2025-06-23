@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/just4fun/static/css/main.ad27dd35.css",
-    "main.js": "/just4fun/static/js/main.2209dcfc.js",
-    "static/js/453.0f7f6009.chunk.js": "/just4fun/static/js/453.0f7f6009.chunk.js",
+    "main.css": "/just4fun/static/css/main.7e3a0f30.css",
+    "main.js": "/just4fun/static/js/main.5e7c789f.js",
+    "static/js/453.41ad13ab.chunk.js": "/just4fun/static/js/453.41ad13ab.chunk.js",
     "static/media/500dos.png": "/just4fun/static/media/500dos.479ce6857c3c78131157.png",
     "static/media/blackswan.png": "/just4fun/static/media/blackswan.7aa1f48c71e7d37176a3.png",
     "static/media/thohh.png": "/just4fun/static/media/thohh.a96c9e9261562aebcdf5.png",
@@ -18,12 +18,12 @@
     "static/media/portfolio.png": "/just4fun/static/media/portfolio.2d494b6432064b9a0238.png",
     "static/media/whitepaper.jpg": "/just4fun/static/media/whitepaper.0df96b7abb1b44c80b8b.jpg",
     "index.html": "/just4fun/index.html",
-    "main.ad27dd35.css.map": "/just4fun/static/css/main.ad27dd35.css.map",
-    "main.2209dcfc.js.map": "/just4fun/static/js/main.2209dcfc.js.map",
-    "453.0f7f6009.chunk.js.map": "/just4fun/static/js/453.0f7f6009.chunk.js.map"
+    "main.7e3a0f30.css.map": "/just4fun/static/css/main.7e3a0f30.css.map",
+    "main.5e7c789f.js.map": "/just4fun/static/js/main.5e7c789f.js.map",
+    "453.41ad13ab.chunk.js.map": "/just4fun/static/js/453.41ad13ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad27dd35.css",
-    "static/js/main.2209dcfc.js"
+    "static/css/main.7e3a0f30.css",
+    "static/js/main.5e7c789f.js"
   ]
 }
