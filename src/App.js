@@ -24,7 +24,7 @@ function App() {
       </div>
     },
     { 
-      path: "/j4f-create", title: "create",
+      path: "/create", title: "create",
       element: 
       <div id="create-page" className='page'>
         <TraditionalArt/>
@@ -32,7 +32,7 @@ function App() {
       </div>
     },
     { 
-      path: "/j4f-watch", title: "watch",
+      path: "/watch", title: "watch",
       element: 
       <div id="watch-page" className='page'>
         <FilmReel/>
@@ -41,21 +41,21 @@ function App() {
       </div>
     },
     { 
-      path: "/j4f-listen", title: "listen",
+      path: "/listen", title: "listen",
       element: 
       <div id="listen" className='page'>
         <Playlist25/>
       </div>
     },
     { 
-      path: "/j4f-read", title: "read",
+      path: "/read", title: "read",
       element: 
       <div id="read-page" className='page'>
         <Bookshelf/>
       </div>
     },
     {  
-      path: "/j4f-code", title: "code",
+      path: "/code", title: "code",
       element: 
       <div id="code-page" className='page'>
         <Programming/>
@@ -65,7 +65,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/just4fun">
         <nav>
           {items.map((item) => (
             <Link className="menu-item" id={item.title} to={item.path}>{item.title}</Link>
