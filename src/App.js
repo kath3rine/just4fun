@@ -15,7 +15,7 @@ import FilmLists from './data/FilmLists.json'
 function App() {
   const items = [
     { 
-      path: "/just4fun", title: "home",
+      path: "/", title: "home",
       element: 
       <div id="home-page" className='page'>
         <h1>kat's dumpster</h1>
