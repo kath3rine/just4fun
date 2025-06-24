@@ -14,7 +14,7 @@
 }
 
 .top, .bottom {
-    height: 280px;
+    height: 320px;
     background-color: var(--dk-brown);
     text-wrap: wrap;
 }
@@ -99,7 +99,8 @@
     }
 }
 
-#bookshelf-content, #charts2 {
+#bookshelf-content, #chart2 {
     display: flex;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }

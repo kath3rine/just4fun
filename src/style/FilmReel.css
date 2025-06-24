@@ -73,11 +73,7 @@
     flex-wrap: wrap;
 }
 
-#film-title {
-  text-align: center;
-}
-
 #film-charts {
   display: flex;
-  text-align: center;
+  flex-wrap: wrap;
 }

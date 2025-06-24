@@ -1,11 +1,12 @@
 [
     {
         "gender": "M",
-        "meeting": "hinge",
+        "meeting": "tinder",
         "month": 3,
         "age": 22,
         "location": "bar",
-        "freq": 1
+        "freq": 1,
+        "race": "mixed"
     },
     {
         "gender": "F",
@@ -13,7 +14,8 @@
         "month": 3,
         "age": 21,
         "location": "restaurant",
-        "freq": 1
+        "freq": 1,
+        "race": "white"
     },
     {
         "gender": "M",
@@ -21,6 +23,7 @@
         "month": 6,
         "age": 21,
         "location": "activity",
-        "freq": 1
+        "freq": 1,
+        "race": "white"
     }
 ]

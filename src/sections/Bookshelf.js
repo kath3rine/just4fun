@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Books from '../data/BookReviews.json'
 import '../style/Bookshelf.css'
 import RatingBar from '../components/RatingBar';
+import MyPie from '../charts/MyPie';
 import RatingChart from '../charts/RatingChart';
-import GenreChart from '../charts/GenreChart';
-import TimelineChart from '../charts/TimelineChart';
+import StackedBarGraph from '../charts/StackedBarGraph'
+import BarGraph from '../charts/BarGraph';
 
 function Book({book, c, index}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -32,12 +33,43 @@ function Book({book, c, index}) {
 }
 
 function Bookshelf() {
-    const COLORS = ['rgb(242, 237, 165)', '#ffd9a4', '#fcd7e9', '#debef6', "#c4e1f6", "#ddd"];
+    const w = 300
+    const h = 200
+    const COLORS = ['rgb(242, 237, 165)', '#ffd9a4', '#fcd7e9', '#debef6', "#c4e1f6"];
+    const months = Array.from({ length: 12 }, (_, i) => 
+        ({ month: i + 1, pages: 0 })
+    );
+    const pagesMap = Books.reduce((acc, item) => {
+        const { month, pages } = item;
+        acc[month] = (acc[month] || 0) + pages;
+        return acc;
+      }, {});
+    const pageData = months.map(({ month }) => ({
+        month,
+        pages: pagesMap[month] || 0,
+      }));
+    
+      const genreMap = Books.reduce((acc, { genre, points }) => {
+        if (!acc[genre]) {
+          acc[genre] = 0;
+        }
+        acc[genre] += points;
+        return acc;
+      }, {});
+    const genreLst = [
+        "mystery", "sci-fi", "romance"
+    ]
+      const genreData = Object.entries(genreMap).map(([genre, points]) => ({
+        genre,
+        points
+      }));
+    
     return (
         <div id="bookshelf">
             <h1>my 2025 bookshelf</h1>
             <RatingBar/>
-            <div id="bookshelf-content">
+            <div id="bookshelf-content" 
+            style={{display: "flex"}}>
                 <div id="shelf">
                         {Books.map((book, index) => (
                             <div>
@@ -48,18 +80,33 @@ function Bookshelf() {
                             </div>
                         ))}
                 </div>
-                <div id="charts">
-                    <GenreChart palette={COLORS} lst={Books}
-                        w={600} h={200} field="genre"
-                        keys={["sci-fi", "drama", "romance", "horror", "mystery"]}/>
-                    <div id="charts2">
-                        <RatingChart palette={COLORS} lst={Books}
-                            w={350} h={200} 
-                            title="ratings vs # of books"/>
-                        <TimelineChart palette={COLORS} lst={Books} id="book-timeline"
-                            w={350} h={200} field="pages"
-                            title="# of pages read each month"/>
-                    </div>
+                <div className="charts"
+                    style={{display: "flex", flexWrap: "wrap", width: "700px"}}>
+                
+                <MyPie palette={COLORS}
+                    categories={genreLst}
+                    w={w} h={h} 
+                    lst={Books} 
+                    k='genre'/>
+
+                <MyPie palette={COLORS} 
+                    categories={genreLst} 
+                    k="genre by points"
+                    w={w} h={h} 
+                    dataIn={genreData}/>
+
+
+
+                <RatingChart palette={COLORS}
+                    w={w} h={h} 
+                    lst={Books}/>
+                        
+                <BarGraph title="pages read each month"
+                    w={300} h={200} 
+                    xaxis="month" 
+                    col={COLORS[4]}
+                    bar="pages" 
+                    dataIn={pageData}/>
                 </div>
             </div>
         </div>

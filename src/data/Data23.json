@@ -1,0 +1,65 @@
+[
+    {
+        "gender": "M",
+        "meeting": "hinge",
+        "month": 1,
+        "age": 21,
+        "location": "cafe",
+        "freq": 3,
+        "race": "white"
+    },
+    {
+        "gender": "M",
+        "meeting": "tinder",
+        "month": 3,
+        "age": 19,
+        "location": "bar",
+        "freq": 5,
+        "race": "white"
+    },
+    {
+        "gender": "M",
+        "meeting": "tinder",
+        "month": 5,
+        "age": 19,
+        "location": "cafe",
+        "freq": 1,
+        "race": "white"
+    },
+    {
+        "gender": "M",
+        "meeting": "mutual",
+        "month": 9,
+        "age": 25,
+        "location": "activity",
+        "freq": 4,
+        "race": "mixed"
+    },
+    {
+        "gender": "M",
+        "meeting": "tinder",
+        "month": 10,
+        "age": 20,
+        "location": "activity",
+        "freq": 1,
+        "race": "white"
+    },
+    {
+        "gender": "M",
+        "meeting": "bar",
+        "month": 11,
+        "age": 18,
+        "location": "restaurant",
+        "freq": 2,
+        "race": "white"
+    },
+    {
+        "gender": "M",
+        "meeting": "tinder",
+        "month": 12,
+        "age": 19,
+        "location": "restaurant",
+        "freq": 5,
+        "race": "white"
+    }
+]

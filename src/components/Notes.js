@@ -30,9 +30,12 @@ function Note({note}) {
 function Notes({notes}) {
     return(
         <div id="notes">
+            <h2>notes</h2>
+            <div id="notes-content">
             {notes.map((note) => (
                 <Note note={note}/>
             ))}
+            </div>
         </div>
     )
 }

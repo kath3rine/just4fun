@@ -36,6 +36,8 @@ nav {
   .menu-item:hover, #home:hover {
     background-color: var(--s3);
   }
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #create-page {
@@ -46,6 +48,12 @@ nav {
 
 .page {
   margin-top: 20px;
+}
+
+.chart {
+  margin: 10px;
+  text-wrap: wrap;
+  text-align: center;
 }
 
 :root {

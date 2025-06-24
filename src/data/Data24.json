@@ -1,0 +1,137 @@
+[
+    {
+        "gender": "M",
+        "meeting": "mutual",
+        "month": 4,
+        "age": 20,
+        "location": "bar",
+        "freq": 3,
+        "race": "white"
+    },
+    {
+        "gender": "F",
+        "meeting": "tinder",
+        "month": 6,
+        "age": 21,
+        "location": "activity",
+        "freq": 1,
+        "race": "me/sa"
+    },
+    {
+        "gender": "M",
+        "meeting": "hinge",
+        "month": 6,
+        "age": 20,
+        "location": "cafe",
+        "freq": 4,
+        "race": "white"
+    },
+    {
+        "gender": "F",
+        "meeting": "tinder",
+        "month": 7,
+        "age": 20,
+        "location": "cafe",
+        "freq": 1,
+        "race": "me/sa"
+    },
+    {
+        "gender": "F",
+        "meeting": "tinder",
+        "month": 7,
+        "age": 19,
+        "location": "restaurant",
+        "freq": 1,
+        "race": "me/sa"
+    },
+    {
+        "gender": "M",
+        "meeting": "hinge",
+        "month": 8,
+        "age": 20,
+        "location": "activity",
+        "freq": 1,
+        "race": "white"
+    },
+    {
+        "gender": "F",
+        "meeting": "hinge",
+        "month": 9,
+        "age": 21,
+        "location": "activity",
+        "freq": 3,
+        "race": "mixed"
+    },
+    {
+        "gender": "M",
+        "meeting": "hinge",
+        "month": 9,
+        "age": 19,
+        "location": "activity",
+        "freq": 1,
+        "race": "white"
+    },
+    {
+        "gender": "F",
+        "meeting": "hinge",
+        "month": 9,
+        "age": 18,
+        "location": "activity",
+        "freq": 1,
+        "race": "mixed"
+    },
+    {
+        "gender": "F",
+        "meeting": "hinge",
+        "month": 10,
+        "age": 20,
+        "location": "activity",
+        "freq": 2,
+        "race": "white"
+    },
+    {
+        "gender": "M",
+        "meeting": "hinge",
+        "month": 10,
+        "age": 19,
+        "location": "restaurant",
+        "freq": 2,
+        "race": "white"
+    },
+    {
+        "gender": "M",
+        "meeting": "hinge",
+        "month": 10,
+        "age": 20,
+        "location": "bar",
+        "freq": 2,
+        "race": "white"
+    },
+    {
+        "gender": "M",
+        "meeting": "hinge",
+        "month": 11,
+        "age": 22,
+        "location": "bar",
+        "freq": 5,
+        "race": "white"
+    },
+    {
+        "gender": "M",
+        "meeting": "bar",
+        "month": 11,
+        "age": 23,
+        "location": "restaurant",
+        "freq": 2,
+        "race": "white"
+    },
+    {
+        "gender": "M",
+        "meeting": "hinge",
+        "month": 12,
+        "age": 22,
+        "location": "restaurant",
+        "freq": 1,
+        "race": "white"
+    }
+]
