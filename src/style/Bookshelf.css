@@ -14,7 +14,7 @@
 }
 
 .top, .bottom {
-    height: 320px;
+    height: 300px;
     background-color: var(--dk-brown);
     text-wrap: wrap;
 }

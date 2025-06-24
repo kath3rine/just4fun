@@ -1,7 +1,19 @@
 import {Legend, Tooltip, BarChart, Bar, XAxis, YAxis} from 'recharts'
 function StackedTimelineChart({cols, title, lsts, lst, target, keys, k, w, h, bars}) {
     const data = []
-    if (bars.length == 2) {
+    if ( bars.length == 2 && k != "rating" && k != "decade") {
+        for (let i = 0; i < keys.length; i++) {
+            var shows = []
+            shows = lsts[1].filter(x => x[k] == keys[i]) 
+            data[i] = {
+                name: keys[i],
+                [bars[0]]: lsts[0].filter(x => x[k] == keys[i]).length * 2,
+                [bars[1]]: shows.length > 0 
+                    ? shows.reduce((acc, x) => x.episodes + acc, 0) * shows.length 
+                    : 0
+            }
+        }
+    } else if (bars.length == 2) {
         for (let i = 0; i < keys.length; i++) {
             data[i] = {
                 name: keys[i],

@@ -20,7 +20,8 @@
         "rating": "s3",
         "points": 3,
         "theme": [
-            "moving relationship"
+            "moving relationship",
+            "relationship comedy"
         ],
         "img": "https://upload.wikimedia.org/wikipedia/en/2/2b/Anora_%282024_film%29_poster.jpg",
         "genre": "drama",
@@ -51,7 +52,8 @@
         "points": 3,
         "decade": "2020s",
         "theme": [
-            "crude humor and satire"
+            "crude humor and satire",
+            "funny jokes and crude humor"
         ],
         "img": "https://upload.wikimedia.org/wikipedia/en/3/38/Shiva_Baby_film_poster.png",
         "review": "extra half-point for dianna agron"
@@ -78,9 +80,10 @@
         "month": 6,
         "rating": "s3",
         "points": 3,
-        "genre": "romance",
+        "genre": "comedy",
         "theme": [
-            "humanity and the world around us"
+            "humanity and the world around us",
+            "tragic sadness and captivating beauty"
         ],
         "decade": "1990s",
         "img": "https://a.ltrbxd.com/resized/film-poster/4/5/6/0/2/45602-chungking-express-0-1000-0-1500-crop.jpg?v=9475abb05b",
@@ -94,7 +97,8 @@
         "points": 3,
         "decade": "1990s",
         "theme": [
-            "humanity and the world around us"
+            "humanity and the world around us",
+            "surreal and thought-provoking"
         ],
         "img": "https://upload.wikimedia.org/wikipedia/en/0/04/Fallen-Angels-Poster.jpg",
         "genre": "romance"
@@ -106,7 +110,8 @@
         "rating": "s3",
         "points": 3,
         "theme": [
-            "intense violence and sexual transgression"
+            "intense violence and sexual transgression",
+            "thrillers and murder mysteries"
         ],
         "genre": "mystery",
         "decade": "1980s",
@@ -119,7 +124,7 @@
         "month": 6,
         "rating": "s4",
         "points": 4,
-        "genre": "romance",
+        "genre": "drama",
         "decade": "2000s",
         "theme": [
             "relationship comedy",

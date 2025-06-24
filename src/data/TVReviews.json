@@ -7,6 +7,7 @@
         "genre": "drama",
         "month": 1,
         "decade": "2020s",
+        "episodes": 8,
         "theme": [
             "moving relationship",
             "touching and sentimental family",
@@ -22,20 +23,23 @@
         "points": 3,
         "month": 2,
         "theme": [
-            "faith and religion"
+            "faith and religion",
+            "horror, the undead, and monster classics"
         ],
         "img": "https://a.ltrbxd.com/resized/film-poster/7/7/4/9/2/3/774923-midnight-mass-0-2000-0-3000-crop.jpg?v=4f5a735828",
         "genre": "mystery",
-        "decade": "2020s"
+        "decade": "2020s",
+        "episodes": 7
     },
     {
         "title": "yellowjackets",
-        "date": "5/1",
+        "date": "4/30",
         "rating": "s5",
         "points": 5,
         "genre": "horror",
-        "month": 5,
+        "month": 4,
         "decade": "2020s",
+        "episodes": 29,
         "img": "https://a.ltrbxd.com/resized/film-poster/1/3/6/8/6/7/5/1368675-yellowjackets-into-the-wild-of-season-3-0-2000-0-3000-crop.jpg?v=96c959b6d5"
     },
     {
@@ -44,6 +48,7 @@
         "rating": "s4",
         "points": 4,
         "month": 6,
+        "episodes": 8,
         "review": "a little slow / not as gripping as i'd like",
         "img": "https://a.ltrbxd.com/resized/film-poster/3/8/4/5/5/7/384557-twin-peaks-0-1000-0-1500-crop.jpg?v=dd1938c1f2",
         "genre": "mystery",

@@ -34,7 +34,7 @@ function Book({book, c, index}) {
 
 function Bookshelf() {
     const w = 300
-    const h = 250
+    const h = 200
     const COLORS = ['rgb(242, 237, 165)', '#ffd9a4', '#fcd7e9', '#debef6', "#c4e1f6"];
     const months = Array.from({ length: 12 }, (_, i) => 
         ({ month: i + 1, pages: 0 })
