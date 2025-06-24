@@ -8,9 +8,9 @@ import StackedBarGraph from '../charts/StackedBarGraph';
 function Wrapped({data, palette, col, w, h, y}) {
     return(
     <div style={{borderTop: "1px #ddd solid", marginTop: "30px"}}>
-        <h2>{y} first dates wrapped </h2>
+        <h2>{y} wrapped </h2>
         <p >total: {data.length}</p>
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+            <div style={{ display: "flex", flexWrap: "wrap" }}>
             <MyPie palette={palette}
             categories={["M", "F"]}
             w={w} h={h} lst={data} k="gender"/>

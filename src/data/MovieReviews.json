@@ -6,7 +6,10 @@
         "rating": "s2",
         "points": 2,
         "genre": "drama",
-        "decade": "20s",
+        "decade": "2020s", 
+        "theme": [
+            "moving relationship"
+        ],
         "img": "https://upload.wikimedia.org/wikipedia/en/1/11/Aftersun.jpg",
         "review": "felt more like a montage than a film with an actual plot"
     },
@@ -16,9 +19,12 @@
         "month": 3,
         "rating": "s3",
         "points": 3,
+        "theme": [
+            "moving relationship"
+        ],
         "img": "https://upload.wikimedia.org/wikipedia/en/2/2b/Anora_%282024_film%29_poster.jpg",
         "genre": "drama",
-        "decade": "20s"
+        "decade": "2020s"
     },
     {
         "title": "bottoms",
@@ -27,7 +33,12 @@
         "rating": "s4",
         "points": 4,
         "genre": "comedy",
-        "decade": "20s",
+        "decade": "2020s",
+        "theme": [
+            "crude humor and satire",
+            "underdogs and coming of age",
+            "funny jokes and crude humor"
+        ],
         "img": "https://upload.wikimedia.org/wikipedia/en/d/db/Bottoms_poster.jpeg",
         "review": "booksmart's awkward gay cousin"
     },
@@ -38,7 +49,10 @@
         "rating": "s3",
         "genre": "comedy",
         "points": 3,
-        "decade": "20s",
+        "decade": "2020s",
+        "theme": [
+            "crude humor and satire"
+        ],
         "img": "https://upload.wikimedia.org/wikipedia/en/3/38/Shiva_Baby_film_poster.png",
         "review": "extra half-point for dianna agron"
     },
@@ -49,7 +63,12 @@
         "rating": "s4",
         "points": 4,
         "genre": "mystery",
-        "decade": "20s",
+        "decade": "2020s",
+        "theme" : [
+            "crude humor and satire",
+            "twisted dark psychological thriller",
+            "spooky, scary comedy"
+        ],
         "img": "https://upload.wikimedia.org/wikipedia/en/7/7f/Bodies_Bodies_Bodies_%28poster%29.jpeg",
         "review": "good watch. tense w/ a little bit of gen-z humor"
     },
@@ -60,7 +79,10 @@
         "rating": "s3",
         "points": 3,
         "genre": "romance",
-        "decade": "90s",
+        "theme": [
+            "humanity and the world around us"
+        ],
+        "decade": "1990s",
         "img": "https://a.ltrbxd.com/resized/film-poster/4/5/6/0/2/45602-chungking-express-0-1000-0-1500-crop.jpg?v=9475abb05b",
         "review": "could not bring myself to care"
     },
@@ -70,7 +92,10 @@
         "month": 6,
         "rating": "s3",
         "points": 3,
-        "decade": "90s",
+        "decade": "1990s",
+        "theme": [
+            "humanity and the world around us"
+        ],
         "img": "https://upload.wikimedia.org/wikipedia/en/0/04/Fallen-Angels-Poster.jpg",
         "genre": "romance"
     },
@@ -80,8 +105,11 @@
         "month": 6,
         "rating": "s3",
         "points": 3,
+        "theme": [
+            "intense violence and sexual transgression"
+        ],
         "genre": "mystery",
-        "decade": "80s",
+        "decade": "1980s",
         "img": "https://upload.wikimedia.org/wikipedia/en/f/fd/Blue_Velvet_%281986%29.png",
         "review": "wtf (derogatory)"
     },
@@ -92,7 +120,12 @@
         "rating": "s4",
         "points": 4,
         "genre": "romance",
-        "decade": "00s",
+        "decade": "2000s",
+        "theme": [
+            "relationship comedy",
+            "moving relationship",
+            "crude humor and satire"
+        ],
         "img": "https://a.ltrbxd.com/resized/film-poster/3/9/7/1/1/39711-saving-face-0-1000-0-1500-crop.jpg?v=cc366a685a",
         "review": "cute"
     }

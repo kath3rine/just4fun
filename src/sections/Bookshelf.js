@@ -34,7 +34,7 @@ function Book({book, c, index}) {
 
 function Bookshelf() {
     const w = 300
-    const h = 200
+    const h = 250
     const COLORS = ['rgb(242, 237, 165)', '#ffd9a4', '#fcd7e9', '#debef6', "#c4e1f6"];
     const months = Array.from({ length: 12 }, (_, i) => 
         ({ month: i + 1, pages: 0 })
@@ -49,20 +49,23 @@ function Bookshelf() {
         pages: pagesMap[month] || 0,
       }));
     
-      const genreMap = Books.reduce((acc, { genre, points }) => {
+    const genreLst = [
+        "sci-fi", "romance", "mystery"
+    ]
+
+      const genreStats = Books.reduce((acc, { genre, points }) => {
         if (!acc[genre]) {
-          acc[genre] = 0;
+          acc[genre] = { total: 0, count: 0 };
         }
-        acc[genre] += points;
+        acc[genre].total += points;
+        acc[genre].count += 1;
         return acc;
       }, {});
-    const genreLst = [
-        "mystery", "sci-fi", "romance"
-    ]
-      const genreData = Object.entries(genreMap).map(([genre, points]) => ({
+    
+      const genreStatsData = Object.entries(genreStats).map(([genre, { total, count }]) => ({
         genre,
-        points
-      }));
+        avgPoints: total / count
+      })).sort((a, b) => b.avgPoints - a.avgPoints);
     
     return (
         <div id="bookshelf">
@@ -88,23 +91,22 @@ function Bookshelf() {
                     w={w} h={h} 
                     lst={Books} 
                     k='genre'/>
-
-                <MyPie palette={COLORS} 
-                    categories={genreLst} 
-                    k="genre by points"
-                    w={w} h={h} 
-                    dataIn={genreData}/>
-
-
+                
+                <BarGraph title="avg rating by genre"
+                    palette={COLORS}
+                    w={w} h={h}
+                    dataIn={genreStatsData}
+                    xaxis="genre"
+                    bar="avgPoints"/>
 
                 <RatingChart palette={COLORS}
                     w={w} h={h} 
                     lst={Books}/>
                         
                 <BarGraph title="pages read each month"
-                    w={300} h={200} 
+                    w={w} h={h} 
                     xaxis="month" 
-                    col={COLORS[4]}
+                    col={COLORS[0]}
                     bar="pages" 
                     dataIn={pageData}/>
                 </div>

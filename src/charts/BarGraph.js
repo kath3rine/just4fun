@@ -1,5 +1,5 @@
-import {Tooltip, BarChart, Bar, XAxis, YAxis } from 'recharts'
-function BarGraph({title, w, h, xaxis, bar, dataIn, col, keys, lst, k}) {
+import {Tooltip, BarChart, Bar, XAxis, YAxis, Cell } from 'recharts'
+function BarGraph({title, w, h, xaxis, bar, dataIn, col, palette, keys, lst, k}) {
     var data = []
     if (dataIn) { {/* data alr aggregated */}
         data = dataIn
@@ -17,9 +17,16 @@ function BarGraph({title, w, h, xaxis, bar, dataIn, col, keys, lst, k}) {
             <h3>{title}</h3>
             <BarChart width={w} height={h} data={data}>
                 <Tooltip/>
-                <XAxis dataKey={xaxis ? xaxis : "name"}/>
-                <YAxis />
-                <Bar dataKey={bar ? bar : "count"} fill={col} />
+                <XAxis dataKey={xaxis ? xaxis : "name"} interval={0}/>
+                <YAxis domain={bar == "avgPoints" ? [0, 5] : [0, 8]} interval={0}/>
+                {palette
+                    ? <Bar dataKey={bar ? bar : "count"} >
+                        {data.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={palette[index]} />
+                        ))} 
+                        </Bar>
+                    : <Bar dataKey={bar ? bar : "count"} fill={col} />
+                }
             </BarChart>
         </div>
     )
