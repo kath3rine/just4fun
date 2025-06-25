@@ -41,7 +41,7 @@
             "funny jokes and crude humor"
         ],
         "img": "https://upload.wikimedia.org/wikipedia/en/d/db/Bottoms_poster.jpeg",
-        "review": "booksmart's awkward gay cousin"
+        "review": "booksmart's awkward gay cousin - cheesy but (surprisingly) it works"
     },
     {
         "title": "shiva baby",
@@ -133,5 +133,16 @@
         ],
         "img": "https://a.ltrbxd.com/resized/film-poster/3/9/7/1/1/39711-saving-face-0-1000-0-1500-crop.jpg?v=cc366a685a",
         "review": "cute"
+    },
+    {
+        "title": "parachute",
+        "date": "6/24",
+        "month": 6,
+        "rating": "s3",
+        "points": 4,
+        "genre": "drama",
+        "decade": "2020s",
+        "img": "https://a.ltrbxd.com/resized/film-poster/8/5/8/0/6/1/858061-parachute-0-2000-0-3000-crop.jpg?v=0895f89486",
+        "review": "i didn't 'get' it"
     }
 ]

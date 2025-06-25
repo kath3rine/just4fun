@@ -5,7 +5,6 @@
         "rating": "s5",
         "month": 1,
         "points": 5,
-        "pages": 400,
         "genre": "mystery",
         "review": "solid textbook murder-mystery"
     },
@@ -15,7 +14,6 @@
         "rating": "s4",
         "points": 4,
         "month": 1,
-        "pages": 416,
         "genre": "mystery"
     },
     {
@@ -24,7 +22,6 @@
         "rating": "s2",
         "points": 2,
         "month": 2,
-        "pages": 464,
         "genre": "mystery",
         "review": "disappointing. climax occurred 40% of the way through the book. super predictable murderer; story was more about covering up the murder than the murder itself"
     },
@@ -33,7 +30,6 @@
         "date": "3/27",
         "month": 3,
         "points": 4,
-        "pages": 400,
         "rating": "s4",
         "genre": "sci-fi"
     },
@@ -41,7 +37,6 @@
         "title": "last night at the telegraph club",
         "date": "5/31",
         "month": 5,
-        "pages": 416,
         "rating": "s4",
         "points": 4,
         "genre": "romance"

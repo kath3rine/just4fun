@@ -1,8 +1,9 @@
 import Data25 from '../data/Data25.json'
 import Data24 from '../data/Data24.json'
 import Data23 from '../data/Data23.json'
-import { PieGraph, GradientBarGraph, StackedNum, AreaGraph } from '../components/Charts';
-
+import {PieGraph} from '../charts/Pies'
+import { AreaGraph } from '../charts/Areas'
+import { BarGraph } from '../charts/Bars'
 
 function Shhh() {
     const genders = ["M", "F"]
@@ -23,39 +24,38 @@ function Shhh() {
                 <p >total: {item.data.length}</p>
                     <div style={{ display: "flex", flexWrap: "wrap" }}>
 
-                    <PieGraph  categories={genders}
-                    lst={item.data}
-                    target="gender"/>
+                        <PieGraph  categories={genders}
+                        lst={item.data}
+                        target="gender"/>
 
-                    <PieGraph  categories={locations}
-                    lst={item.data}
-                    target="location"/>
+                        <PieGraph  categories={locations}
+                        lst={item.data}
+                        target="location"/>
 
-                    <PieGraph  categories={races}
-                    lst={item.data}
-                    target="race"/>
+                        <PieGraph  categories={races}
+                        lst={item.data}
+                        target="race"/>
 
-                    <PieGraph  categories={meetings}
-                    lst={item.data}
-                    target="meeting"/>
+                        <PieGraph  categories={meetings}
+                        lst={item.data}
+                        target="meeting"/>
 
-                    <AreaGraph lst={item.data}
-                    target="age"
-                    xaxis={Array.from({ length: 8 }, (_, i) => 18 + i)}
-                    title="age"/>
+                        <AreaGraph title="age"
+                        fillCol={0}
+                        lineCol={1}
+                        lst={item.data}
+                        cnt={8}
+                        offset={18}
+                        k="age"/>
 
-                    <GradientBarGraph title="duration (# of dates)"
-                    lst={item.data} 
-                    target="freq"/>
-
-                    <StackedNum title="month + method"
-                    lsts={item.data}
-                    categories={meetings}
-                    target="meeting"
-                    k="month"
-                    cnt={12}/>
-        
-                </div>
+                        <AreaGraph title="duration"
+                        lst={item.data}
+                        fillCol={0}
+                        lineCol={1}
+                        cnt={5}
+                        offset={1}
+                        k="freq"/>
+                    </div>
                 </div>
             ))}
             

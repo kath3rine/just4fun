@@ -3,8 +3,9 @@ import Movies from "../data/MovieReviews.json"
 import TV from '../data/TVReviews.json'
 import RatingBar from '../components/RatingBar';
 import "../style/FilmReel.css";
-import { AvgRating, StackedNum, StackedCat, PieGraph } from '../components/Charts'
-import { Treemap, Tooltip, ResponsiveContainer} from  'recharts'
+import { PieGraph } from '../charts/Pies'
+import { AvgRating, Stacked } from '../charts/Bars'
+import { Themes } from '../charts/Trees'
 
 function Film({film, index}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -37,43 +38,12 @@ function Film({film, index}) {
 }
 
 const films = [...Movies, ...TV]
-const genreLst = [ 'horror', 'comedy', 'mystery', 'romance', 'drama' ]
-const decadesLst = [ '1980s', '1990s', '2000s', '2020s' ]
+const genres = [ 'horror', 'mystery', 'drama', 'comedy', 'romance' ]
+const decades = [ '1980s', '1990s', '2000s', '2020s' ]
+const medias = [ "movies", "shows" ]
  
 
-function Themes() {
-    const themeCounts = {};
-    films.forEach(({ theme }) => {
-        const themes = Array.isArray(theme) ? theme : [];
-        themes.forEach(t => {
-            if (!themeCounts[t]) {
-                themeCounts[t] = 0;
-            }
-            themeCounts[t] += 1;
-        });
-    });
 
-    const data = Object.entries(themeCounts).map(([theme, count]) => ({
-        name: theme,
-        size: count
-      }));
-      
-    return(
-        <div style={{width: "100%"}}>
-            <h3>themes</h3>
-            <ResponsiveContainer width="100%" height={200}>
-            <Treemap
-            data={data}
-            dataKey="size"
-            nameKey="name"
-            fontSize={8}
-            >
-                <Tooltip />
-            </Treemap>
-            </ResponsiveContainer>
-        </div>
-    )
-}
 
 function FilmReel({dataIn}) {
     
@@ -101,11 +71,6 @@ function FilmReel({dataIn}) {
             </h2>
             <div className="charts" id="film-charts"
             style={{textAlign: "center"}}>
-                
-                <PieGraph categories={genreLst}
-                lst={films}
-                target="genre"/>
-
 
                 <PieGraph dataIn={[
                     {
@@ -119,13 +84,17 @@ function FilmReel({dataIn}) {
                 ]} 
                 target="media"/>
                 
-                <StackedCat lsts={[Movies, TV]}
-                cols={decadesLst}
-                categories={["movies", "shows"]}
-                target="decade"
+                <PieGraph categories={genres}
+                lst={films}
+                target="genre"/>
+
+                <Stacked lsts={[Movies, TV]}
+                cols={decades}
+                categories={medias}
+                k="decade"
                 title="decade released" />
-                
-                <AvgRating target="media"
+
+                <AvgRating k="media"
                 data={[
                     {
                         media: "movies",
@@ -136,8 +105,8 @@ function FilmReel({dataIn}) {
                         avgPoints: TV.reduce((acc, x) => x.points + acc, 0) / TV.length 
                     }
                 ]}/>
-                
-                <AvgRating target="genre"
+
+                <AvgRating k="genre"
                 data={Object.entries(
                     films.reduce((acc, { genre, points }) => {
                         if (!acc[genre]) {
@@ -152,8 +121,8 @@ function FilmReel({dataIn}) {
                     avgPoints: total / count
                 })).sort((a, b) => b.avgPoints - a.avgPoints )}/>
 
-                
-                <AvgRating target="decade"
+
+                <AvgRating k="decade"
                 data={Object.entries(
                     films.reduce((acc, { decade, points }) => {
                         if (!acc[decade]) {
@@ -168,43 +137,48 @@ function FilmReel({dataIn}) {
                     avgPoints: total / count
                 })).sort((a, b) => a.decade.localeCompare(b.decade))} />
 
-                <StackedNum title="rating distribution: # watched"
-                lsts={[Movies, TV]} 
+                <Stacked title="rating distribution by media"
+                lsts={[Movies, TV]}
                 k="points"
-                categories={["movies", "shows"]} 
+                categories={medias}
                 cnt={5}/>
 
-                <StackedNum title="rating distribution: # watched"
+                <Stacked title="rating distribution by genre" 
                 lsts={films}
-                categories={genreLst}
-                target="genre" cnt={5}
-                k="points"/>
+                categories={genres}
+                k="points"
+                target="genre"
+                cnt={5}/>
 
-                <StackedNum title="rating distribution: # watched"
+
+                <Stacked title="rating distribution by decade released" 
                 lsts={films}
-                categories={decadesLst}
-                target="decade" cnt={5} k="points"/>
-                    
-                <StackedNum title="hrs watched per month"
+                categories={decades}
+                k="points"
+                target="decade"
+                cnt={5}/>
+
+                <Stacked title="hrs watched each month"
                 lsts={[Movies, TV]}
-                categories={["movies", "shows"]}
+                categories={medias}
                 k="month"
                 cnt={12}/>
-                    
-                <StackedNum title="# watched per month" 
+
+                <Stacked title="# watched per month by genre" 
                 lsts={films}
-                categories={genreLst}
-                target="genre" cnt={12}
-                k="month"/>
-
-
-                <StackedNum title="# watched per month" 
+                categories={genres}
+                k="month"
+                target="genre"
+                cnt={12}/>
+                
+                <Stacked title="# watched per month by decade released" 
                 lsts={films}
-                categories={decadesLst}
-                target="decade" cnt={12}
-                k="month"/>                
+                categories={decades}
+                k="month"
+                target="decade"
+                cnt={12}/>
 
-                <Themes/>
+                <Themes dataIn={films}/>
             </div>
         </div>
     )

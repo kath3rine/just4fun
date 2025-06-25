@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Books from '../data/BookReviews.json'
 import '../style/Bookshelf.css'
 import RatingBar from '../components/RatingBar';
-import { BarGraph, PieGraph, GradientBarGraph, RatingDist, AvgRating } from '../components/Charts'
+import { PieGraph } from '../charts/Pies';
+import { AvgRating, BarGraph } from '../charts/Bars';
 
 function Book({book, c, index}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -30,25 +31,8 @@ function Book({book, c, index}) {
 }
 
 function Bookshelf() {
-    const w = 300
-    const h = 200
-    const COLORS = ['rgb(242, 237, 165)', '#ffd9a4', '#fcd7e9', '#debef6', "#c4e1f6"];
-    const months = Array.from({ length: 12 }, (_, i) => 
-        ({ month: i + 1, pages: 0 })
-    );
-    const pagesMap = Books.reduce((acc, item) => {
-        const { month, pages } = item;
-        acc[month] = (acc[month] || 0) + pages;
-        return acc;
-      }, {});
-    const pageData = months.map(({ month }) => ({
-        month,
-        pages: pagesMap[month] || 0,
-      }));
     
-    const genreLst = [
-        "sci-fi", "romance", "mystery"
-    ]
+    const genres = [ "sci-fi", "romance", "mystery" ]
     
     return (
         <div id="bookshelf">
@@ -66,17 +50,16 @@ function Bookshelf() {
                         ))}
                 </div>
                 <div className="charts">
-                
-                <PieGraph categories={genreLst}
+                                
+                <PieGraph categories={genres}
                 lst={Books}
-                target='genre'/>
-                
+                target="genre"/>
 
                 <AvgRating data={
                     Object.entries(
                         Books.reduce((acc, { genre, points }) => {
                             if (!acc[genre]) {
-                            acc[genre] = { total: 0, count: 0 };
+                                acc[genre] = { total: 0, count: 0 };
                             }
                             acc[genre].total += points;
                             acc[genre].count += 1;
@@ -87,16 +70,20 @@ function Bookshelf() {
                         avgPoints: total / count
                     })).sort((a, b) => b.avgPoints - a.avgPoints)
                 }
-                target="genre"/>
+                k="genre"/>
 
-                <GradientBarGraph title="rating distribution"
-                lst={Books} 
-                target="points"/>
+                <BarGraph title="rating distribution"
+                lst={Books}
+                k="points"
+                offset={1}
+                cnt={5}/>
 
-                <BarGraph lst={Books} 
-                target="month"
-                xaxis={Array.from({ length: 12 }, (_, i) => i + 1)}
-                title="pages read each month"        />
+                <BarGraph title="# of books read each month"
+                lst={Books}
+                offset={1}
+                k="month"
+                color={2}
+                cnt={12}/>
                 </div>
             </div>
         </div>
