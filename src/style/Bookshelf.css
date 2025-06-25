@@ -97,10 +97,13 @@
     .s5 {
         height: 280px;
     }
+
+
 }
 
-#bookshelf-content, #chart2 {
+#bookshelf     .charts {
     display: flex;
-    margin-bottom: 10px;
     flex-wrap: wrap;
+    border-top: 1px #bbb solid;
+    margin-top: 50px;
 }

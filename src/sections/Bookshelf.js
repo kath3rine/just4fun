@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import Books from '../data/BookReviews.json'
 import '../style/Bookshelf.css'
 import RatingBar from '../components/RatingBar';
-import MyPie from '../charts/MyPie';
-import RatingChart from '../charts/RatingChart';
-import StackedBarGraph from '../charts/StackedBarGraph'
-import BarGraph from '../charts/BarGraph';
+import { BarGraph, PieGraph, GradientBarGraph, RatingDist, AvgRating } from '../components/Charts'
 
 function Book({book, c, index}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -52,27 +49,12 @@ function Bookshelf() {
     const genreLst = [
         "sci-fi", "romance", "mystery"
     ]
-
-      const genreStats = Books.reduce((acc, { genre, points }) => {
-        if (!acc[genre]) {
-          acc[genre] = { total: 0, count: 0 };
-        }
-        acc[genre].total += points;
-        acc[genre].count += 1;
-        return acc;
-      }, {});
-    
-      const genreStatsData = Object.entries(genreStats).map(([genre, { total, count }]) => ({
-        genre,
-        avgPoints: total / count
-      })).sort((a, b) => b.avgPoints - a.avgPoints);
     
     return (
         <div id="bookshelf">
             <h1>my 2025 bookshelf</h1>
             <RatingBar/>
-            <div id="bookshelf-content" 
-            style={{display: "flex"}}>
+            <div id="bookshelf-content">
                 <div id="shelf">
                         {Books.map((book, index) => (
                             <div>
@@ -83,32 +65,38 @@ function Bookshelf() {
                             </div>
                         ))}
                 </div>
-                <div className="charts"
-                    style={{display: "flex", flexWrap: "wrap", width: "700px"}}>
+                <div className="charts">
                 
-                <MyPie palette={COLORS}
-                    categories={genreLst}
-                    w={w} h={h} 
-                    lst={Books} 
-                    k='genre'/>
+                <PieGraph categories={genreLst}
+                lst={Books}
+                target='genre'/>
                 
-                <BarGraph title="avg rating by genre"
-                    palette={COLORS}
-                    w={w} h={h}
-                    dataIn={genreStatsData}
-                    xaxis="genre"
-                    bar="avgPoints"/>
 
-                <RatingChart palette={COLORS}
-                    w={w} h={h} 
-                    lst={Books}/>
-                        
-                <BarGraph title="pages read each month"
-                    w={w} h={h} 
-                    xaxis="month" 
-                    col={COLORS[0]}
-                    bar="pages" 
-                    dataIn={pageData}/>
+                <AvgRating data={
+                    Object.entries(
+                        Books.reduce((acc, { genre, points }) => {
+                            if (!acc[genre]) {
+                            acc[genre] = { total: 0, count: 0 };
+                            }
+                            acc[genre].total += points;
+                            acc[genre].count += 1;
+                            return acc;
+                        }, {})
+                    ).map(([genre, { total, count }]) => ({
+                        genre,
+                        avgPoints: total / count
+                    })).sort((a, b) => b.avgPoints - a.avgPoints)
+                }
+                target="genre"/>
+
+                <GradientBarGraph title="rating distribution"
+                lst={Books} 
+                target="points"/>
+
+                <BarGraph lst={Books} 
+                target="month"
+                xaxis={Array.from({ length: 12 }, (_, i) => i + 1)}
+                title="pages read each month"        />
                 </div>
             </div>
         </div>
