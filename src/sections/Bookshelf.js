@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Books from '../data/BookReviews.json'
 import '../style/Bookshelf.css'
 import RatingBar from '../components/RatingBar';
-import { PieGraph } from '../charts/Pies';
-import { AvgRating, BarGraph } from '../charts/Bars';
+import { AvgRating, BarGraph, PieGraph } from '../components/Charts';
 
 function Book({book, c, index}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -55,21 +54,7 @@ function Bookshelf() {
                 lst={Books}
                 target="genre"/>
 
-                <AvgRating data={
-                    Object.entries(
-                        Books.reduce((acc, { genre, points }) => {
-                            if (!acc[genre]) {
-                                acc[genre] = { total: 0, count: 0 };
-                            }
-                            acc[genre].total += points;
-                            acc[genre].count += 1;
-                            return acc;
-                        }, {})
-                    ).map(([genre, { total, count }]) => ({
-                        genre,
-                        avgPoints: total / count
-                    })).sort((a, b) => b.avgPoints - a.avgPoints)
-                }
+                <AvgRating dataIn={Books} 
                 k="genre"/>
 
                 <BarGraph title="rating distribution"

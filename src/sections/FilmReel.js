@@ -3,9 +3,7 @@ import Movies from "../data/MovieReviews.json"
 import TV from '../data/TVReviews.json'
 import RatingBar from '../components/RatingBar';
 import "../style/FilmReel.css";
-import { PieGraph } from '../charts/Pies'
-import { AvgRating, Stacked } from '../charts/Bars'
-import { Themes } from '../charts/Trees'
+import { AvgRating, Stacked, Themes, PieGraph, Stacked2 } from '../components/Charts'
 
 function Film({film, index}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -37,21 +35,40 @@ function Film({film, index}) {
     )
 }
 
-const films = [...Movies, ...TV]
-const genres = [ 'horror', 'mystery', 'drama', 'comedy', 'romance' ]
-const decades = [ '1980s', '1990s', '2000s', '2020s' ]
-const medias = [ "movies", "shows" ]
- 
+function FilmReel() {
+    const films = [...Movies, ...TV]
+    const genres = [ 'comedy', 'drama', 'horror', 'mystery', 'romance' ]
+    const decades = [ '1980s', '1990s', '2000s', '2020s' ]
+    const medias = [ "movies", "shows" ]
 
+    function monthlyHrs() {
+        const data = []
+        for (let i = 1; i <= 12; i++) {
+            data.push({
+                name: i,
+                movies: Movies.filter(x => x.month == i).length * 2,
+                shows: TV.filter(x => x.month == i).reduce((acc, x) => acc + x.episodes, 0)
+            })
+        }
+        return data
+    } 
 
-
-function FilmReel({dataIn}) {
-    
+    function genreHrs() {
+        var data = []
+        for (const g of genres) {
+            data.push({
+                name: g,
+                value: Movies.filter(x => x.genre == g).length * 2 + TV.filter(x => x.genre == g).reduce((acc, x) => acc + x.episodes, 0)
+            })
+        }
+        return data
+    }
     
     return(
         <div className="section" id="film-reel">
             <h1>my 2025 film reel</h1>
             <RatingBar/>
+
             <h3>movies</h3>
             <div className="reel">
                 {Movies.map((film, index) => (
@@ -79,20 +96,39 @@ function FilmReel({dataIn}) {
                     },
                     {
                         name: "shows",
-                        value: TV.reduce((acc, x) => x.episodes + acc, 0) * TV.length
+                        value: TV.reduce((acc, x) => x.episodes + acc, 0)
                     }
                 ]} 
-                target="media"/>
+                ratio={1.5 }
+                title="media (hrs)"/>
                 
-                <PieGraph categories={genres}
-                lst={films}
-                target="genre"/>
+
+                <PieGraph title="genre (hrs)"
+                ratio={1.5}
+                dataIn={genreHrs()}
+                />
 
                 <Stacked lsts={[Movies, TV]}
                 cols={decades}
                 categories={medias}
                 k="decade"
                 title="decade released" />
+
+
+                <Stacked2 title="hrs watched by genre" 
+                movies={Movies} 
+                tv={TV}
+                k="genre" 
+                categories={genres}/>
+
+                <Stacked2 title="hrs watched per decade released"
+                movies={Movies} 
+                tv={TV}
+                k="decade" 
+                categories={decades}/>
+
+                
+
 
                 <AvgRating k="media"
                 data={[
@@ -107,35 +143,11 @@ function FilmReel({dataIn}) {
                 ]}/>
 
                 <AvgRating k="genre"
-                data={Object.entries(
-                    films.reduce((acc, { genre, points }) => {
-                        if (!acc[genre]) {
-                          acc[genre] = { total: 0, count: 0 };
-                        }
-                        acc[genre].total += points;
-                        acc[genre].count += 1;
-                        return acc;
-                    }, {})
-                ).map(([genre, { total, count }]) => ({
-                    genre,
-                    avgPoints: total / count
-                })).sort((a, b) => b.avgPoints - a.avgPoints )}/>
+                dataIn={films}/>
 
 
                 <AvgRating k="decade"
-                data={Object.entries(
-                    films.reduce((acc, { decade, points }) => {
-                        if (!acc[decade]) {
-                          acc[decade] = { total: 0, count: 0 };
-                        }
-                        acc[decade].total += points;
-                        acc[decade].count += 1;
-                        return acc;
-                    }, {})
-                ).map(([decade, { total, count }]) => ({
-                    decade,
-                    avgPoints: total / count
-                })).sort((a, b) => a.decade.localeCompare(b.decade))} />
+                dataIn={films} />
 
                 <Stacked title="rating distribution by media"
                 lsts={[Movies, TV]}
@@ -159,9 +171,8 @@ function FilmReel({dataIn}) {
                 cnt={5}/>
 
                 <Stacked title="hrs watched each month"
-                lsts={[Movies, TV]}
+                dataIn={monthlyHrs()}
                 categories={medias}
-                k="month"
                 cnt={12}/>
 
                 <Stacked title="# watched per month by genre" 
@@ -177,6 +188,8 @@ function FilmReel({dataIn}) {
                 k="month"
                 target="decade"
                 cnt={12}/>
+
+
 
                 <Themes dataIn={films}/>
             </div>
