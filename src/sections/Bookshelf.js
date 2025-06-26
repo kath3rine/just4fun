@@ -48,11 +48,9 @@ function Bookshelf() {
                             </div>
                         ))}
                 </div>
+
                 <div className="charts">
                                 
-                <PieGraph categories={genres}
-                lst={Books}
-                target="genre"/>
 
                 <AvgRating dataIn={Books} 
                 k="genre"/>
@@ -69,6 +67,12 @@ function Bookshelf() {
                 k="month"
                 color={2}
                 cnt={12}/>
+
+
+                <PieGraph categories={genres} 
+                ratio={1.3}
+                lst={Books}
+                target="genre"/>
                 </div>
             </div>
         </div>

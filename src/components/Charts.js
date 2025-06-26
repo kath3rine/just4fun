@@ -7,7 +7,8 @@ import { BarChart, Bar,
 
 const palette = ['rgb(232, 227, 145)', '#efc984', '#ecb7d9', '#deaef6', "#a4d1e6"];
 const w = 430
-const h = 180
+const h = 150
+const ph = 200
 
 {/* x axis: 1...5, k: value @ x axis, each col. a diff color */}
 export function AvgRating({dataIn, data, k}) {
@@ -156,7 +157,7 @@ export function Stacked({lsts, cols, cnt, swap, categories, k, target, offset, r
     )
 }
 
-export function Stacked2({movies, tv, categories, k, title}) {
+export function Stacked2({movies, tv, categories, ratio, k, title}) {
     const movieData = []
     for (const cat of categories) {
         movieData.push({
@@ -183,7 +184,7 @@ export function Stacked2({movies, tv, categories, k, title}) {
     return(
         <div>
             <h3>{title}</h3>
-            <BarChart width={w} height={h} 
+            <BarChart width={w * (ratio || 1)} height={h} 
             data={[accumulate(movieData, "movies"), accumulate(tvData, "shows")]}>
                 <XAxis dataKey="name" />
                 <YAxis />
@@ -266,7 +267,7 @@ export function Themes({dataIn}) {
     return(
         <div style={{width: "100%"}}>
             <h3>themes</h3>
-            <ResponsiveContainer width="100%" height={200}>
+            <ResponsiveContainer width="100%" height={h}>
             <Treemap
             data={data}
             dataKey="size"
@@ -305,12 +306,11 @@ export function PieGraph({categories, lst, target, dataIn, title, noLegend, rati
             <h3> 
                 { title? title : target}
             </h3>
-            {JSON.stringify(data)}
             
-            <PieChart height={h} width={w * (ratio || 1)}>
+            <PieChart height={ph} width={w * (ratio || 1)}>
                 <Pie data={data} 
                 cx="50%" cy="50%" 
-                outerRadius={60 * (ratio * 0.75 || 1)} 
+                outerRadius={50 * (ratio || 1)} 
                 dataKey={"value"} 
                 label={renderCustomizedLabel} >
                     {data.map((entry, index) => (

@@ -4,10 +4,10 @@ import Data23 from '../data/Data23.json'
 import { AreaGraph, StackedArea, Stacked, Stacked3, PieGraph } from '../components/Charts'
 
 function Shhh() {
-    const genders = ["M", "F"]
-    const locations = [ "restaurant", "bar", "cafe", "activity" ]
-    const meetings = [ "hinge", "tinder", "bar", "mutual" ]
-    const races = [ "white", "mixed", "me/sa", "asian", "hispanic" ]
+    const genders = ["F", "M"]
+    const locations = [ "activity", "bar", "cafe", "restaurant"  ]
+    const meetings = [ "bar", "hinge",  "mutual", "tinder" ]
+    const races = [ "asian", "hispanic", "me/sa", "mixed", "white",  ]
     const data = [
         { data: Data25, year: 2025 },
         { data: Data24, year: 2024 },
@@ -16,104 +16,73 @@ function Shhh() {
     const years = ["2023", "2024", "2025"]
     const lsts = [Data23, Data24, Data25]
 
+    const stackedAreaData = [
+        { title: "age", cnt: 8, k: "age", offset: 18 },
+        { title: "month", cnt: 12, k: "month" },
+        { title: "duration (# of dates)", cnt: 5, k: "freq"}
+    ]
+
+    const stacked1Data = [
+        { title: "gender", ratio: 0.75, cols: genders, k: "gender"},
+        { title: "race", ratio: 0.8, cols: races, k: "race"},
+        { title: "how we met", ratio: 0.75, cols: meetings, k: "meeting"},
+        { title: "first date location", ratio: 0.75, cols: locations, k: "location"}
+    ]
+
+    const stacked2Data = [
+        { title: "age", ratio: 0.75, categories: genders, k: "gender"},
+        { title: "race", ratio: 0.9, categories: races, k: "race"},
+        { title: "how we met", ratio: 0.7, categories: meetings, k: "meeting"},
+        { title: "location", ratio: 0.75, categories: locations, k: "location"},
+    ]
+
+    const areaData = [
+        { title: "age", cnt: 8, offset: 18, k: "age"},
+        { title: "month", cnt: 12, k: "month"},
+        { title: "duration", cnt: 5, k: "freq"}
+    ]
+
+    const pieData = [
+        { categories: genders, target: "gender" },
+        { categories: races, target: "race" },
+        { categories: locations, target: "location" },
+        { categories: meetings, target: "meeting" }
+    ]
+
     return(
         <div>
             <h2>annual comparison</h2>
-            <div style={{display: "flex", flexWrap: "wrap"}}>
+            <div style={{display: "flex", flexWrap: "wrap", textAlign: "center"}}>
 
-            <StackedArea title="age"
-                 cnt={8}
-                offset={18}
+            { stackedAreaData.map((item) => (
+                <StackedArea title={item.title}
+                cnt={item.cnt}
+                offset={item.offset}
                 lsts={lsts}
                 categories={years}
-                k="age"/>
+                k={item.k}/>
+            ))}
 
-
-                <StackedArea title="month"
-                 cnt={12}
+            { stacked1Data.map((item) => (
+                <Stacked title={item.title}
+                ratio={item.ratio}
+                domain={[0, 20]}
                 lsts={lsts}
+                cols={item.cols}
                 categories={years}
-                k="month"/>
+                k={item.k}/>
+            ))}
 
-
-                <StackedArea title="duration (# of dates)"
-                cnt={5}
-                lsts={lsts}
-                categories={years}
-                k="freq"/>
-                
-                <Stacked title="gender"
-                ratio={0.75}
-                domain={[0, 18]}
-                lsts={lsts}
-                cols={genders}
-                categories={years}
-                k="gender"/>
-
-
-
-                
-                <Stacked title="race"
-                ratio={0.8}
-                domain={[0, 18]}
-                lsts={lsts}
-                cols={races}
-                categories={years}
-                k="race"/>
-
-
-                
-                <Stacked title="meeting"
-                lsts={lsts}
-                domain={[0, 18]}
-
-                ratio={0.75}
-                cols={meetings}
-                categories={years}
-                k="meeting"/>
-
-                <Stacked title="location"
-                lsts={lsts}
-                domain={[0, 18]}
-                cols={locations}
-                ratio={0.75}
-                categories={years}
-                k="location"/>
-
-
-                <Stacked title="genderswap"
-                ratio={0.75}
-                domain={[0, 15]}
+            { stacked2Data.map((item) => (
+                <Stacked title={item.title}
+                ratio={item.ratio}
+                domain={[0, 16]}
                 lsts={lsts}
                 cols={years}
                 swap
-                categories={genders}
-                k="gender"/>
-
-                <Stacked title="raceswap"
-                ratio={0.9}
-                domain={[0, 15]}
-                lsts={lsts}
-                swap
-                cols={years}
-                categories={races}
-                k="race"/>
-
-                <Stacked title="meetingswap"
-                ratio={0.7}
-                domain={[0, 15]}
-                lsts={lsts}swap
-                cols={years}
-                categories={meetings}
-                k="meeting"/>
-                <Stacked title="location swap"
-                ratio={0.75}
-                domain={[0, 15]}
-                lsts={lsts}swap
-                cols={years}
-                categories={locations}
-                k="location"/>
-
+                categories={item.categories}
+                k={item.k}/>
+            ))}
 
             </div>
             {data.map((item, index) => (
@@ -122,52 +91,22 @@ function Shhh() {
                 <p >total: {item.data.length}</p>
                     <div style={{ display: "flex", flexWrap: "wrap" }}>
 
-                    <AreaGraph title="age"
-                        fillCol={2-index}
-                        lineCol={2-index}
-                        lst={item.data}
-                        cnt={8}
-                        offset={18}
-                        k="age"/>
+                        { areaData.map((item2) => (
+                            <AreaGraph title={item2.title}
+                            fillCol={2-index}
+                            lineCol={2-index}
+                            offset={item2.offset}
+                            lst={item.data}
+                            cnt={item2.cnt}
+                            k={item2.k}/>
+                        ))}
 
-                        <AreaGraph title="month"
-                        
-                        fillCol={2-index}
-                        lineCol={2-index}
-                        lst={item.data}
-                        cnt={12}
-                        k="month"/>
-
-
-                        <AreaGraph title="duration"
-                        lst={item.data}
-                        fillCol={2-index}
-                        lineCol={2-index}
-                        cnt={5}
-                        offset={1}
-                        k="freq"/>
-                        <PieGraph  categories={genders}
-                        lst={item.data}
-                        ratio={0.75}
-                        target="gender"/>
-
-                        <PieGraph  categories={races}
-                        lst={item.data}
-                        ratio={0.75}
-                        target="race"/>
-
-
-
-                        <PieGraph  categories={locations}
-                        lst={item.data}
-                        ratio={0.75}
-                        target="location"/>
-
-                        <PieGraph  categories={meetings}
-
-                ratio={0.75}
-                        lst={item.data}
-                        target="meeting"/>
+                        { pieData.map((item2) => (
+                            <PieGraph categories={item2.categories}
+                            lst={item.data}
+                            ratio={.75}
+                            target={item2.target}/>
+                        ))}
 
                     </div>
                 </div>

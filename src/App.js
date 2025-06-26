@@ -8,7 +8,7 @@ import Bookshelf from './sections/Bookshelf.js'
 import Programming from "./sections/Programming.js";
 import Playlist25 from './sections/Playlist25.js';
 import Favorites from './sections/Favorites.js'
-import FilmLists from './data/FilmLists.json'
+import Thoughts from './data/Thoughts.json'
 import Notes from './components/Notes.js'
 import Shhh from './sections/Shhh.js'
 
@@ -19,9 +19,14 @@ function App() {
       element: 
       <div id="home-page" className='page'>
         <h1>my dumpster</h1>
-        <h3>a website 4 things i like 2 do - click a link above 2 get started</h3>
-        <h3>like if deviantart and letterboxd and spotify and goodreads and github had a baby </h3>
+        <p>
+          congrats, u found my (evidently not so) secret corner of the internet-- 
+          <a href="https://kath3rine.github.io">
+              (my public persona here)
+          </a>
+        </p>
         <Favorites/>
+        <Notes notes={Thoughts}/>
       </div>
     },
     { 
@@ -38,7 +43,6 @@ function App() {
       <div id="watch-page" className='page'>
         <FilmReel/>
         <FilmJournal/>
-        <Notes notes={FilmLists}/>
       </div>
     },
     { 
