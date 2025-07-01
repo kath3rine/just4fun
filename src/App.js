@@ -5,7 +5,7 @@ import FilmJournal from './sections/FilmJournal.js';
 import FilmReel from './sections/FilmReel.js'
 import Bookshelf from './sections/Bookshelf.js'
 import Playlist25 from './sections/Playlist25.js';
-import Favorites from './sections/Favorites.tsx'
+import Favorites from './sections/Favorites.js'
 import Reports from './sections/Reports.js'
 import Thoughts from './data/Thoughts.json'
 import Notes from './components/Notes.tsx'

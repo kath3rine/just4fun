@@ -1,9 +1,11 @@
 import Data25 from '../data/Data25.json'
 import Data24 from '../data/Data24.json'
 import Data23 from '../data/Data23.json'
-import { AreaGraph, StackedArea, Stacked, Stacked3, PieGraph } from '../components/Charts'
+import { StackedArea, StackedBar, AreaGraph, PieGraph } from '../components/Charts.tsx'
 
 function Shhh() {
+    const w = 430
+    const h = 150
     const genders = ["F", "M"]
     const locations = [ "activity", "bar", "cafe", "restaurant"  ]
     const meetings = [ "bar", "hinge",  "mutual", "tinder" ]
@@ -56,6 +58,7 @@ function Shhh() {
 
             { stackedAreaData.map((item) => (
                 <StackedArea title={item.title} 
+                h={h} w={w}
                 cnt={item.cnt}
                 offset={item.offset}
                 lsts={lsts}
@@ -64,21 +67,23 @@ function Shhh() {
             ))}
 
             { stacked1Data.map((item) => (
-                <Stacked title={item.title}
+                <StackedBar title={item.title}
                 ratio={item.ratio}
                 domain={[0, 20]}
                 lsts={lsts}
+                w={w} h={h}
                 cols={item.cols}
                 categories={years}
                 k={item.k}/>
             ))}
 
             { stacked2Data.map((item) => (
-                <Stacked title={item.title}
+                <StackedBar title={item.title}
                 ratio={item.ratio}
                 domain={[0, 16]}
                 lsts={lsts}
                 cols={years}
+                w={w} h={h}
                 swap
                 categories={item.categories}
                 k={item.k}/>
@@ -98,6 +103,8 @@ function Shhh() {
                             offset={item2.offset}
                             lst={item.data}
                             cnt={item2.cnt}
+                            h={h} w={w}
+                            color={index}
                             k={item2.k}/>
                         ))}
 
@@ -105,6 +112,7 @@ function Shhh() {
                             <PieGraph categories={item2.categories}
                             lst={item.data}
                             ratio={.75}
+                            w={w} h={h}
                             target={item2.target}/>
                         ))}
 

@@ -1,11 +1,5 @@
 import FavoritesList from '../data/Favorites.json'
 
-interface FavoriteProps {
-  title: string;
-  link?: string;
-  img: string;
-}
-
 function Favorites() {
     return (
       <div className="section" 
@@ -14,7 +8,7 @@ function Favorites() {
         <div style={{ 
           display: "flex", flexWrap: "wrap", flexDirection: "row"
         }}>
-        {FavoritesList.map((item : FavoriteProps) => (
+        {FavoritesList.map((item) => (
           <div className="s2"
           style={{ 
             width: "240px", 
