@@ -14,7 +14,7 @@ function RatingBar() {
             <p style={{ marginLeft: "50px", marginBottom: "0px" }}> 
                 my rating (out of 5)
             </p>
-            {items.map((item) => (
+            {items.map((item : { cn: string, title: number}) => (
                 <div style={{
                     width: "30px", 
                     margin: "12px", 

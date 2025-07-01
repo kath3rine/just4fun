@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router';
-import Art from './sections/Art.js';
+import Art from './sections/Create.js';
 import FilmJournal from './sections/FilmJournal.js';
 import FilmReel from './sections/FilmReel.js'
 import Bookshelf from './sections/Bookshelf.js'
 import Playlist25 from './sections/Playlist25.js';
-import Favorites from './sections/Favorites.js'
+import Favorites from './sections/Favorites.tsx'
 import Reports from './sections/Reports.js'
 import Thoughts from './data/Thoughts.json'
-import Notes from './components/Notes.js'
+import Notes from './components/Notes.tsx'
 import Shhh from './sections/Shhh.js'
 
 function Home() {

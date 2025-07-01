@@ -1,14 +1,33 @@
 import { useState } from "react";
 
-export function Note({note}) {
+interface NoteData {
+    header: number;
+    text: string;
+    list?: string[];
+}
+
+interface NoteType {
+    title: string;
+    items: NoteData[]
+}
+
+interface NoteProps {
+    note: NoteType;
+}
+
+interface NotesProps {
+    notes: NoteType[]
+}
+
+const Note : React.FC<NoteProps> = ({note}) => {
     const [expand, setExpand] = useState(false);
-
     const toggle = () => {
-        setExpand(!expand); // Toggle the state
-      };
+        setExpand(!expand); 
+    };
 
-      return (
-        <div style={{
+    return(
+        <div>
+            <div style={{
             width: "260px",
             filter: "drop-shadow(5px 10px 5px #bbb)",
             textWrap: "wrap",
@@ -47,15 +66,13 @@ export function Note({note}) {
                 </button>
             </div>
         </div>
-      );
+        </div>
+    )
 }
 
-function Notes({notes}) {
+const Notes : React.FC<NotesProps> = ({notes}) => {
     return(
-        <div style={{
-            marginTop: "20px",
-            paddingTop: "20px"
-        }}>
+        <div style={{ marginTop: "20px", paddingTop: "20px" }}>
             <h2>thoughts</h2>
             <div style={{display: "flex", flexWrap: "wrap"}}>
             {notes.map((note) => (

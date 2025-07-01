@@ -1,7 +1,20 @@
 import React, { useState } from 'react';
 import "../style/Gallery.css"
 
-function Page({page}) {
+interface PageType {
+    name: string;
+    img: string;
+    date: string;
+    med?: string;
+    desc: string;
+    link?: string;
+}
+
+interface PageProps {
+    page: PageType;
+}
+
+function Page({page} : PageProps) {
     return (
         <div id="page">
             <div id="item">
@@ -18,8 +31,15 @@ function Page({page}) {
     )
 }
 
-function Gallery({pages, title, num, col}) {
-    const [idx, setIdx] = useState(0);
+interface GalleryProps {
+    pages: PageType[];
+    title: string;
+    num: number;
+    col: string;
+}
+
+function Gallery({pages, title, num, col} : GalleryProps) {
+    const [idx, setIdx] = useState<number>(0);
 
     const onBack = () => {
         setIdx((prev) => Math.max(prev - 1, 0));
@@ -45,7 +65,7 @@ function Gallery({pages, title, num, col}) {
             
             <div id="wrapper">
                 <div id="gallery-content" style={sliding}>
-                {pages.map((page, index) => (
+                {pages.map((page : PageType, index) => (
                     <div key={index}>
                         <Page page={page}/>
                     </div>

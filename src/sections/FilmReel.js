@@ -38,7 +38,7 @@ function Film({film, index}) {
 function FilmReel() {
     const films = [...Movies, ...TV]
     const genres = [ 'comedy', 'drama', 'horror', 'mystery', 'romance' ]
-    const decades = [ '1980s', '1990s', '2000s', '2020s' ]
+    const decades = [ '1970-80s', '1990s', '2000s', '2020s' ]
     const medias = [ "movies", "shows" ]
 
     function monthlyHrs() {

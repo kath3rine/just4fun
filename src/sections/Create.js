@@ -1,4 +1,4 @@
-import Gallery from '../components/Gallery.js'
+import Gallery from '../components/Gallery.tsx'
 import Face from "../assets/art/face.jpg";
 import Fruit from "../assets/art/fruit.png";
 import Panda from "../assets/art/panda.png";

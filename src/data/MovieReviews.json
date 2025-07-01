@@ -47,9 +47,9 @@
         "title": "shiva baby",
         "date": "6/5",
         "month": 6,
-        "rating": "s3",
+        "rating": "s4",
         "genre": "comedy",
-        "points": 3,
+        "points": 4,
         "decade": "2020s",
         "theme": [
             "crude humor and satire",
@@ -62,8 +62,8 @@
         "title": "bodies bodies bodies",
         "date": "6/6",
         "month": 6,
-        "rating": "s4",
-        "points": 4,
+        "rating": "s5",
+        "points": 5,
         "genre": "mystery",
         "decade": "2020s",
         "theme" : [
@@ -93,8 +93,8 @@
         "title": "fallen angels",
         "date": "6/7",
         "month": 6,
-        "rating": "s3",
-        "points": 3,
+        "rating": "s4",
+        "points": 4,
         "decade": "1990s",
         "theme": [
             "humanity and the world around us",
@@ -114,7 +114,7 @@
             "thrillers and murder mysteries"
         ],
         "genre": "mystery",
-        "decade": "1980s",
+        "decade": "1970-80s",
         "img": "https://upload.wikimedia.org/wikipedia/en/f/fd/Blue_Velvet_%281986%29.png",
         "review": "wtf (derogatory)"
     },
@@ -139,10 +139,25 @@
         "date": "6/24",
         "month": 6,
         "rating": "s3",
-        "points": 4,
+        "points": 3,
         "genre": "drama",
         "decade": "2020s",
         "img": "https://a.ltrbxd.com/resized/film-poster/8/5/8/0/6/1/858061-parachute-0-2000-0-3000-crop.jpg?v=0895f89486",
         "review": "i didn't 'get' it"
+    },
+    {
+        "title": "cabaret",
+        "date": "6/30",
+        "month": 6,
+        "rating": "s4",
+        "points": 4,
+        "genre": "romance",
+        "decade": "1970-80s",
+        "theme": [
+            "song and dance",
+            "dazzling vocal performances",
+            "dance rhythms and catchy tunes"
+        ],
+        "img": "https://a.ltrbxd.com/resized/sm/upload/x9/ji/ih/xp/1RmUfX3LcS897GhUWrWp5nRADo4-0-1000-0-1500-crop.jpg?v=a432fbfc58"
     }
 ]

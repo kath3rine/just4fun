@@ -1,4 +1,4 @@
-import Playlist from "../components/Playlist.js"
+import Playlist from "../components/Playlist.tsx"
 import Songs1 from '../data/Playlist2025p1.json'
 
 function Playlist25() {

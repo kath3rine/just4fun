@@ -1,4 +1,14 @@
-function Playlist({songs, title}) {
+interface Song {
+    month: string;
+    link: string;
+}
+
+interface PlaylistProps {
+    title: string;
+    songs: Song[];
+}
+
+function Playlist({title, songs} : PlaylistProps) {
 
     return(
         <div style={{
@@ -13,7 +23,7 @@ function Playlist({songs, title}) {
             <h2 style={{margin: "10px", color: "white"}}>
                 {title}
             </h2>
-            {songs.map((song) => (
+            {songs.map((song : Song) => (
                 <div>
                     <p style={{ color: "#bbb", margin: "0px 0px 0px 10px"}}>
                         {song.month}
