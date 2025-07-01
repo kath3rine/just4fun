@@ -14,7 +14,7 @@ export function Note({note}) {
             textWrap: "wrap",
             margin: "10px 20px 10px 0px"
         }}>
-            <div className={note.color || "s1"} style={{ 
+            <div className="s1" style={{ 
                 padding: "10px 20px 0px 20px"
             }}>
                 <h3 style={{ textAlign: "center"}}>

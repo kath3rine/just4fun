@@ -55,7 +55,7 @@ function Shhh() {
             <div style={{display: "flex", flexWrap: "wrap", textAlign: "center"}}>
 
             { stackedAreaData.map((item) => (
-                <StackedArea title={item.title}
+                <StackedArea title={item.title} 
                 cnt={item.cnt}
                 offset={item.offset}
                 lsts={lsts}
@@ -86,7 +86,7 @@ function Shhh() {
 
             </div>
             {data.map((item, index) => (
-                <div style={{borderTop: "1px #ddd solid", marginTop: "30px"}}>
+                <div style={{borderTop: "1px #ddd solid", margin: "00px"}}>
                 <h2>{item.year} wrapped </h2>
                 <p >total: {item.data.length}</p>
                     <div style={{ display: "flex", flexWrap: "wrap" }}>

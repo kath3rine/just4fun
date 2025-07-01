@@ -22,9 +22,6 @@ h2 a:hover {
 }
 
 nav {
-  #home {
-    background-color: var(--s4);
-  }
 
   .menu-item {
     margin: 10px 20px 20px 0px;
@@ -40,12 +37,6 @@ nav {
   flex-wrap: wrap;
 }
 
-#create-page {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 .page {
   margin-top: 20px;
 }
@@ -57,11 +48,11 @@ nav {
 }
 
 :root {
-  --s1: rgb(242, 237, 165);
-  --s2: #ffd9a4;
-  --s3: #fcd7e9;
-  --s4: #debef6;
-  --s5: #c4e1f6;
+  --s1: rgb(240, 235, 190);
+  --s2: #fee0b5;
+  --s3: #fde3ef;
+  --s4: #e4cdf7;
+  --s5: #cce3f4;
 }
 
 .s1 {

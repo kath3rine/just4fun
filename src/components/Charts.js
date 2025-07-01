@@ -5,8 +5,8 @@ import { BarChart, Bar,
     Tooltip, XAxis, YAxis, Cell, Legend} from  'recharts' 
 
 
-const palette = ['rgb(232, 227, 145)', '#efc984', '#ecb7d9', '#deaef6', "#a4d1e6"];
-const w = 430
+const palette = ['rgb(232, 227, 125)', '#efc964', '#ecb7d9', '#ceaef6', "#a4d1e6"];
+const w = 415
 const h = 150
 const ph = 200
 

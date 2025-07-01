@@ -1,6 +1,6 @@
-import THOHH from '../assets/journal/thohh.png'
-import BlackSwan from '../assets/journal/blackswan.png'
-import DOS from '../assets/journal/500dos.png'
+import THOHH from '../assets/filmjournal/thohh.png'
+import BlackSwan from '../assets/filmjournal/blackswan.png'
+import DOS from '../assets/filmjournal/500dos.png'
 
 function FilmJournal() {
     const filmJournal = { borderTop: "1px #bbb solid", marginTop: "30px" }

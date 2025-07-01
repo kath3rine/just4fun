@@ -1,30 +1,25 @@
 [
     {
         "title": "playlist",
-        "color": "s1",
         "img": "https://open.spotify.com/embed/playlist/3YcEc58ZJMAcvByCiAPRO9?utm_source=generator"
     },
     {
         "title": "tv show",
-        "color": "s2",
         "link": "https://www.imdb.com/title/tt11041332/",
         "img": "https://a.ltrbxd.com/resized/film-poster/1/3/6/8/6/7/5/1368675-yellowjackets-into-the-wild-of-season-3-0-2000-0-3000-crop.jpg?v=96c959b6d5"
     },
     {
         "title": "movie",
-        "color": "s3",
         "link": "https://www.imdb.com/title/tt17527468/?ref_=nv_sr_srsg_0_tt_5_nm_3_in_0_q_bottoms",
         "img": "https://upload.wikimedia.org/wikipedia/en/d/db/Bottoms_poster.jpeg"
     },
     {
         "title": "book",
-        "color": "s4",
         "link": "https://www.amazon.com/Good-Girls-Guide-Murder/dp/1984896369",
         "img": "https://upload.wikimedia.org/wikipedia/en/e/e2/A_Good_Girl%27s_Guide_to_Murder.jpg"
     },
     {
         "title": "song",
-        "color": "s5",
         "img": "https://open.spotify.com/embed/track/3xoM5gZ2RVQqLkjqEgrJ4x?utm_source=generator"
     }
 ]

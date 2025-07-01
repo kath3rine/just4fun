@@ -18,7 +18,7 @@ function Page({page}) {
     )
 }
 
-function Gallery({pages, title, num}) {
+function Gallery({pages, title, num, col}) {
     const [idx, setIdx] = useState(0);
 
     const onBack = () => {
@@ -34,7 +34,7 @@ function Gallery({pages, title, num}) {
     };
     
     return(
-        <div id="gallery">
+        <div id="gallery" className={col}>
             <div id="header">
                 <h2>{title}</h2>
                 <div id="buttons">

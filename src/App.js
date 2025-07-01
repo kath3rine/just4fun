@@ -1,40 +1,47 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router';
-import TraditionalArt from './sections/TraditionalArt.js';
-import DigitalArt from './sections/DigitalArt.js';
+import Art from './sections/Art.js';
 import FilmJournal from './sections/FilmJournal.js';
 import FilmReel from './sections/FilmReel.js'
 import Bookshelf from './sections/Bookshelf.js'
-import Programming from "./sections/Programming.js";
 import Playlist25 from './sections/Playlist25.js';
 import Favorites from './sections/Favorites.js'
+import Reports from './sections/Reports.js'
 import Thoughts from './data/Thoughts.json'
 import Notes from './components/Notes.js'
 import Shhh from './sections/Shhh.js'
 
-function App() {
-  const items = [
-    { 
-      path: "/", title: "home",
-      element: 
-      <div id="home-page" className='page'>
+function Home() {
+  return(
+    <div id="home-page" className='page'>
         <h1>my dumpster</h1>
-        <p>
+        <p style={{paddingBottom: "30px", borderBottom: "1px #bbb solid"}}>
           congrats, u found my (evidently not so) secret corner of the internet-- 
           <a href="https://kath3rine.github.io">
               (my public persona here)
           </a>
         </p>
-        <Favorites/>
+        <Reports />
+        <Favorites />
         <Notes notes={Thoughts}/>
+    </div>
+  )
+}
+
+function App() {
+  const items = [
+    { 
+      path: "/", title: "home 🏠",
+      element: 
+      <div>
+        <Home/>
       </div>
     },
     { 
       path: "/create", title: "create 🎨",
       element: 
       <div id="create-page" className='page'>
-        <TraditionalArt/>
-        <DigitalArt/>
+        <Art/>
       </div>
     },
     { 
@@ -57,13 +64,6 @@ function App() {
       element: 
       <div id="read-page" className='page'>
         <Bookshelf/>
-      </div>
-    },
-    {  
-      path: "/code", title: "code 💻",
-      element: 
-      <div id="code-page" className='page'>
-        <Programming/>
       </div>
     }
   ]

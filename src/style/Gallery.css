@@ -78,14 +78,14 @@ a {
     }
 
     #wrapper {
-        width: 425px;
+        width: 350px;
     }
 
     #page {
         border-top-right-radius: 100px;
         border-bottom-right-radius: 100px;
-        width: 425px;
-        height: 550px;
+        width: 350px;
+        height: 475px;
         padding: 5%;
         background-image: url("../assets/whitepaper.jpg");
     }
@@ -106,21 +106,6 @@ a {
     }
 }
 
-#traditional-art {
-    #gallery {
-        background-color: var(--s2);
-    }
-}
-
-#digital-art {
-    #gallery {
-        background-color: var(--s3);
-    }
-
-    a:hover {
-        color: var(--s3);
-    }
-}
 
 .window {
     #gallery {
@@ -184,10 +169,6 @@ a {
 }
 
 #programming {
-    #gallery {
-        background-color: var(--s3);
-    }
-
     .window a:hover {
         color: var(--s3);
     }

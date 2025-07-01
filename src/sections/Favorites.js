@@ -3,15 +3,13 @@ import FavoritesList from '../data/Favorites.json'
 function Favorites() {
     return (
       <div className="section" 
-      style={{ 
-        borderTop: "1px #ddd solid", marginTop: "30px"
-      }}>
+      style={{ marginTop: "30px" }}>
         <h2>a few of my favorite things (recently)</h2>
         <div style={{ 
           display: "flex", flexWrap: "wrap", flexDirection: "row"
         }}>
         {FavoritesList.map((item) => (
-          <div className={item.color} 
+          <div className="s2"
           style={{ 
             width: "240px", 
             height: "100%", 
