@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Cell, ResponsiveContainer, Treemap, PieChart, Pie, Legend, Area, AreaChart } from 'recharts';
-const palette = ['rgb(232, 227, 125)', '#efc964', '#ecb7d9', '#ceaef6', "#a4d1e6"];
+const palette = ['rgb(232, 227, 125)', '#efc964', '#ecb7d9', '#ceaef6', "#a4d1e6", "#aeb"];
 
 {/* BARS */}
 
@@ -86,13 +86,14 @@ export function StackedBar(props: StackedBarProps) {
             }
         }
     }
+    const myDomain: any = [0, props.domain]
 
     return(
         <div>
             <h3>{props.title}</h3>
             <BarChart width={props.w * (props.ratio || 1)} height={props.h} data={data}>
                 <XAxis dataKey="name" />
-                <YAxis/>
+                <YAxis domain={myDomain}/>
                 <Tooltip />
                 <Legend/>
                 {Array.from({ length: props.categories.length }, (_, i) => i).map((x) => (
@@ -111,6 +112,7 @@ type AvgRatingProps = {
     k: string;
     w: number;
     h: number;
+    color?: number;
 };
 
 export function AvgRating(props: AvgRatingProps) {
@@ -152,8 +154,12 @@ export function AvgRating(props: AvgRatingProps) {
         <Tooltip />
         <Bar dataKey="avgPoints">
           {data.map((entry: any, index: number) => (
-            <Cell key={`cell-${index}`} 
-            fill={palette[index % palette.length]} />
+            props.color != null 
+                ? <Cell key={`cell-${index}`} 
+                fill={palette[props.color]} /> 
+                : <Cell key={`cell-${index}`} 
+                fill={palette[index % palette.length]} />
+            
           ))}
         </Bar>
       </BarChart>
@@ -211,6 +217,7 @@ type Stacked2Props = {
     w: number
     h: number
     ratio?: number
+    domain?: number
 }
 
 export function Stacked2(props: Stacked2Props) {
@@ -238,13 +245,15 @@ export function Stacked2(props: Stacked2Props) {
                 .reduce((acc, x) => acc + x.episodes, 0)
         })
     }
+
+    const myDomain: any = [0, props.domain]
     return(
         <div>
             <h3>{props.title}</h3>
             <BarChart width={props.w * (props.ratio || 1)} height={props.h} 
             data={[accumulate(movieData, "movies"), accumulate(tvData, "shows")]}>
                 <XAxis dataKey="name" />
-                <YAxis />
+                <YAxis domain={myDomain}/>
                 <Tooltip />
                 <Legend/>
                 {Array.from({ length: props.categories.length }, (_, i) => i).map((x) => (
@@ -361,14 +370,19 @@ type AreaProps = {
     color: number
     k: string
     cnt: number
+    dataIn?: any[]
 }
 
 export function AreaGraph(props: AreaProps) {
     var data: any[] = []
-    for (let i = 0; i < props.cnt; i++) {
-        data[i] = {
-            name: i + (props.offset || 1),
-            count: props.lst.filter(x => x[props.k] == i + (props.offset || 1)).length
+    if (props.dataIn) {
+        data = props.dataIn
+    } else {
+        for (let i = 0; i < props.cnt; i++) {
+            data[i] = {
+                name: i + (props.offset || 1),
+                count: props.lst.filter(x => x[props.k] == i + (props.offset || 1)).length
+            }
         }
     }
 
@@ -393,20 +407,26 @@ type StackedAreaProps = {
     h: number
     lsts: {[key: string]: string | number}[][]
     offset?: number
-    categories: any[]
+    categories: string[] | number[]
     k: string
     cnt: number
+    dataIn?: any[]
 }
 
 export function StackedArea(props: StackedAreaProps) {
     var data: any[] = []
-    for (let i = 0; i < props.cnt; i++) {
-        const entry: any = { name: i + (props.offset || 1)}
-        for (let j = 0; j < props.categories.length; j++) {
-            entry[props.categories[j]] = props.lsts[j].filter(x => x[props.k] == i + (props.offset || 1)).length
+    if (props.dataIn) {
+        data = props.dataIn
+    } else {
+        for (let i = 0; i < props.cnt; i++) {
+            const entry: any = { name: i + (props.offset || 1)}
+            for (let j = 0; j < props.categories.length; j++) {
+                entry[props.categories[j]] = props.lsts[j].filter(x => x[props.k] == i + (props.offset || 1)).length
+            }
+            data.push(entry)
         }
-        data.push(entry)
     }
+
     
     return(
         <div>

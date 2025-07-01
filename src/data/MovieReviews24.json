@@ -1,0 +1,178 @@
+[
+    {
+        "title": "the ballad of songbirds and snakes",
+        "month": 3,
+        "points": 4,
+        "genre": "sci-fi",
+        "decade": "2020s",
+        "theme": [
+            "song and dance",
+            "thought-providing sci-fi action"
+        ]
+    },
+    {
+        "title": "saltburn",
+        "month": 3,
+        "points": 4,
+        "genre": "comedy",
+        "decade": "2020s",
+        "theme": [
+            "intense violence and sexual transgression",
+            "twisted dark psychological thriller"
+        ]
+    },
+    {
+        "title": "booksmart",
+        "month": 5,
+        "points": 5,
+        "genre": "comedy",
+        "decade": "2010s",
+        "theme": [
+            "crude humor and satire",
+            "underdogs and coming of age"
+        ]
+    },
+    {
+        "title": "the menu",
+        "month": 5,
+        "points": 5,
+        "genre": "mystery",
+        "decade": "2020s",
+        "theme": [
+            "intense violence and sexual transgression",
+            "humanity and the world around us"
+        ]
+    },
+    {
+        "title": "challengers",
+        "month": 5,
+        "points": 3,
+        "genre": "romance",
+        "decade": "2020s",
+        "theme": [
+            "moving relationship",
+            "erotic relationships and desire"
+        ]
+    },
+    {
+        "title": "2001 a space odyssey",
+        "month": 5,
+        "points": 3,
+        "genre": "sci-fi",
+        "decade": "<=1970s",
+        "theme": [
+            "humanity and the world around us",
+            "monsters, aliens, sci-fi, the apocalypse"
+        ]
+    },
+    {
+        "title": "eyes wide shut",
+        "month": 5,
+        "points": 4,
+        "genre": "mystery",
+        "decade": "1990s",
+        "theme": [
+            "humanity and the world around us",
+            "intense violence and sexual transgression"
+        ]
+    },
+    {
+        "title": "500 days of summer",
+        "month": 6,
+        "points": 5,
+        "genre": "romance",
+        "decade": "2000s",
+        "theme": [
+            "relationship comedy",
+            "moving relationship"
+        ]
+    },
+    {
+        "title": "10 things i hate about you",
+        "month": 6,
+        "points": 5,
+        "genre": "comedy",
+        "decade": "2000s",
+        "theme": [
+            "underdogs and coming of age",
+            "relationship comedy"
+        ]
+    },
+    {
+        "title": "i saw the tv glow",
+        "month": 6,
+        "points": 4,
+        "genre": "drama",
+        "decade": "2020s",
+        "theme": [
+            "humanity and the world around us",
+            "moving relationship"
+        ]
+    },
+    {
+        "title": "mulholland drive",
+        "month": 7,
+        "points": 5,
+        "genre": "mystery",
+        "decade": "2000s",
+        "theme": [
+            "humanity and the world around us",
+            "intense violence and sexual transgression"
+        ]
+    },
+    {
+        "title": "bound",
+        "month": 7,
+        "points": 3,
+        "genre": "mystery",
+        "decade": "1990s",
+        "theme": [
+            "crime, drugs, gangsters",
+            "heists and thrilling action"
+        ]
+    },
+    {
+        "title": "dune",
+        "month": 11,
+        "points": 3,
+        "genre": "sci-fi",
+        "decade": "2020s",
+        "theme": [
+            "epic heroes",
+            "monsters, aliens, sci-fi, the apocalypse"
+        ]
+    },
+    {
+        "title": "in the mood for love",
+        "month": 11,
+        "points": 4,
+        "genre": "romance",
+        "decade": "2000s",
+        "theme": [
+            "moving relationship",
+            "humanity and the world around us"
+        ]
+    },
+    {
+        "title": "di di",
+        "month": 11,
+        "points": 4,
+        "genre": "drama",
+        "decade": "2020s",
+        "theme": [
+            "moving relationship",
+            "emotional and touching family dramas"
+        ]
+    },
+    {
+        "title": "gone girl",
+        "month": 12,
+        "points": 5,
+        "genre": "mystery",
+        "decade": "2010s",
+        "theme": [
+            "thrillers and murder mysteries",
+            "intense violence and sexual transgression"
+        ]
+    }
+]

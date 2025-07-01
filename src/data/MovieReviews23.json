@@ -1,0 +1,145 @@
+[
+    {
+        "title": "500 days of summer",
+        "month": 1,
+        "points": 4,
+        "genre": "romance",
+        "decade": "2000s",
+        "theme": [
+            "relationship comedy",
+            "moving relationship"
+        ]
+    },
+    {
+        "title": "glass onion",
+        "month": 1,
+        "points": 4,
+        "genre": "mystery",
+        "decade": "2020s",
+        "theme": [
+            "thrillers and murder mysteries",
+            "intriguing and suspenseful murder mystery"
+        ]
+    },
+    {
+        "title": "the menu",
+        "month": 3,
+        "points": 5,
+        "genre": "mystery",
+        "decade": "2020s",
+        "theme": [
+            "intense violence and sexual transgression",
+            "humanity and the world around us"
+        ]
+    },
+    {
+        "title": "im thinking of ending things",
+        "month": 5,
+        "points": 1,
+        "genre": "drama",
+        "decade": "2020s",
+        "theme": [
+            "humanity and the world around us",
+            "surreal and thought provoking"
+        ]
+    },
+    {
+        "title": "friends with benefits",
+        "month": 6,
+        "points": 3,
+        "genre": "comedy",
+        "decade": "2010s",
+        "theme": [
+            "relationship comedy",
+            "crude humor and satire"
+        ]
+    },
+    {
+        "title": "mulholland drive",
+        "month": 6,
+        "points": 5,
+        "genre": "mystery",
+        "decade": "2000s",
+        "theme": [
+            "humanity and the world around us",
+            "intense violence and sexual transgression"
+        ]
+    },
+    {
+        "title": "gone girl",
+        "month": 7,
+        "points": 5,
+        "genre": "mystery",
+        "decade": "2010s",
+        "theme": [
+            "thrillers and murder mysteries",
+            "intense violence and sexual transgression"
+        ]
+    },
+    {
+        "title": "eternal sunshine of the spotless mind",
+        "month": 7,
+        "points": 5,
+        "genre": "romance",
+        "decade": "2000s",
+        "theme": [
+            "humanity and the world around us",
+            "moving relationship"
+        ]
+    },
+    {
+        "title": "american psycho",
+        "month": 11,
+        "points": 4,
+        "genre": "horror",
+        "decade": "2000s",
+        "theme": [
+            "horror, the undead, and monster classics",
+            "intense violence and sexual transgression"
+        ]
+    },
+    {
+        "title": "10 things i hate about you",
+        "month": 11,
+        "points": 4,
+        "genre": "comedy",
+        "decade": "1990s",
+        "theme": [
+            "underdogs and coming of age",
+            "relationship comedy"
+        ]
+    },
+    {
+        "title": "jennifer's body",
+        "month": 11,
+        "points": 3,
+        "genre": "horror",
+        "decade": "2000s",
+        "theme": [
+            "horror, the undead, and monster classics",
+            "underdogs and coming of age"
+        ]
+    },
+    {
+        "title": "midsommar",
+        "month": 12,
+        "points": 3,
+        "genre": "horror",
+        "decade": "2020s",
+        "theme": [
+            "intense violence and sexual transgression",
+            "horror, the undead, and monster classics"
+        ]
+    },
+    {
+        "title": "barbie",
+        "month": 12,
+        "points": 4,
+        "genre": "comedy",
+        "decade": "2020s",
+        "theme": [
+            "humanity and the world around us",
+            "crude humor and satire"
+        ]
+    }
+]

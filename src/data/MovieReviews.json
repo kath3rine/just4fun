@@ -8,7 +8,8 @@
         "genre": "drama",
         "decade": "2020s", 
         "theme": [
-            "moving relationship"
+            "moving relationship",
+            "touching and sentimental family stories"
         ],
         "img": "https://upload.wikimedia.org/wikipedia/en/1/11/Aftersun.jpg",
         "review": "felt more like a montage than a film with an actual plot"
@@ -78,7 +79,7 @@
         "month": 6,
         "rating": "s3",
         "points": 3,
-        "genre": "comedy",
+        "genre": "romance",
         "theme": [
             "humanity and the world around us",
             "tragic sadness and captivating beauty"
@@ -112,7 +113,7 @@
             "thrillers and murder mysteries"
         ],
         "genre": "mystery",
-        "decade": "1970-80s",
+        "decade": "1980s",
         "img": "https://upload.wikimedia.org/wikipedia/en/f/fd/Blue_Velvet_%281986%29.png",
         "review": "wtf (derogatory)"
     },
@@ -122,7 +123,7 @@
         "month": 6,
         "rating": "s4",
         "points": 4,
-        "genre": "drama",
+        "genre": "romance",
         "decade": "2000s",
         "theme": [
             "relationship comedy",
@@ -148,8 +149,8 @@
         "month": 6,
         "rating": "s4",
         "points": 4,
-        "genre": "romance",
-        "decade": "1970-80s",
+        "genre": "drama",
+        "decade": "<=1970s",
         "theme": [
             "song and dance",
             "dazzling vocal performances"
