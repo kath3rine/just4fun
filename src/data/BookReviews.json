@@ -40,5 +40,57 @@
         "rating": "s4",
         "points": 4,
         "genre": "romance"
+    },
+    {
+        "title": "crying in h-mart",
+        "date": "6/27",
+        "month": 6,
+        "points": 4,
+        "rating": "s4",
+        "genre": "non-fiction"
+    },
+    {
+        "title": "if we were villians",
+        "date": "7/10",
+        "month": 7,
+        "rating": "s3",
+        "points": 3,
+        "genre": "mystery",
+        "review": "had the potential to be a solid murder-mystery, but ultimately devolved into a bunch of bad cliches"
+    },
+    {
+        "title": "the stranger",
+        "date": "7/22",
+        "month": 7,
+        "points": 2,
+        "rating": "s2",
+        "genre": "fiction"
+    },
+    {
+        "title": "everything is tuberculosis",
+        "date": "8/6",
+        "month": 8,
+        "rating": "s4",
+        "points": 4,
+        "genre": "non-fiction",
+        "review": "i never thought i'd be invested in a book about tuberculosis; but if john green writes it, i'm reading it"
+    },
+    {
+        "title": "timequake",
+        "date": "8/7",
+        "month": 8,
+        "points": 2,
+        "rating": "s2",
+        "genre": "fiction",
+        "review": "disjointed, fractured rambling"
+    },
+    {
+        "title": "atmosphere",
+        "date": "8/27",
+        "month": 8,
+        "rating": "s4",
+        "points": 4,
+        "genre": "romance",
+        "review": "not really a 'space book', but a love story with space as the background. cute story tho"
     }
 ]

@@ -156,5 +156,45 @@
             "dazzling vocal performances"
         ],
         "img": "https://a.ltrbxd.com/resized/sm/upload/x9/ji/ih/xp/1RmUfX3LcS897GhUWrWp5nRADo4-0-1000-0-1500-crop.jpg?v=a432fbfc58"
+    },
+    {
+        "title": "my first summer",
+        "date": "7/17",
+        "month": 7,
+        "rating": "s2",
+        "points": 2,
+        "genre": "drama",
+        "decade": "2020s",
+        "img": "https://a.ltrbxd.com/resized/film-poster/6/6/2/8/2/5/662825-my-first-summer-0-2000-0-3000-crop.jpg?v=03e2665500",
+        "review": "idk why i keep watching these type of movies b/c i always end up falling asleep"
+    },
+    {
+        "title": "handmaiden",
+        "date": "7/19",
+        "month": 7,
+        "rating": "s4",
+        "points": 4,
+        "genre": "romance",
+        "decade": "2010s",
+        "theme": [
+            "intense violence and sexual transgression",
+            "erotic relationships and desire"
+        ],
+        "img": "https://a.ltrbxd.com/resized/sm/upload/pc/n6/pz/mi/wvzfK5QR6dGLwND8MCzWjsQWG4Q-0-2000-0-3000-crop.jpg?v=bcfcc8f8f6"
+    },
+    {
+        "title": "moulin rouge",
+        "date": "8/3",
+        "month": 8,
+        "rating": "s3",
+        "points": 3,
+        "genre": "romance",
+        "decade": "2000s",
+        "theme": [
+            "song and dance",
+            "humanity and the world around us"
+        ],
+        "img": "https://a.ltrbxd.com/resized/film-poster/5/1/3/2/8/51328-moulin-rouge--0-2000-0-3000-crop.jpg?v=26abae7095",
+        "review": "tacky. also, the soundtrack is so much worse than the musical's"
     }
 ]

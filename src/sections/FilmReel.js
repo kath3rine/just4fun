@@ -146,7 +146,7 @@ function FilmChartsCombo() {
                     w={w} h={h}
                     categories={medias}
                     k="decade"
-                    domain={9}
+                    domain={12}
                     title="decade released" />
                 
                 
@@ -194,6 +194,7 @@ function FilmChartsCombo() {
                     lsts={[item.movies, item.tv]}
                     k="points"
                     categories={medias}
+                    domain={8}
                     w={w} h={h}
                     cnt={5}/>
                 
@@ -203,41 +204,43 @@ function FilmChartsCombo() {
                     w={w} h={h}
                     k="points"
                     target="genre"
+                    domain={8}
                     cnt={5}/>
                 
                 
                     <StackedBar title="rating distribution by decade released" 
-                                lsts={item.films}
-                                categories={decades}
-                                k="points"
-                                w={w} h={h}
-                                target="decade"
-                                cnt={5}/>
+                    lsts={item.films}
+                    categories={decades}
+                    k="points"
+                    w={w} h={h}
+                    target="decade"
+                    domain={8}
+                    cnt={5}/>
                 
-                                <StackedBar title="hrs watched each month"
-                                dataIn={monthlyHrs(item.movies, item.tv)}
-                                categories={medias}
-                                w={w} h={h}
-                                domain={32}
-                                cnt={12}/>
+                    <StackedBar title="hrs watched each month"
+                    dataIn={monthlyHrs(item.movies, item.tv)}
+                    categories={medias}
+                    w={w} h={h}
+                    domain={32}
+                    cnt={12}/>
                 
-                                <StackedBar title="# watched per month by genre" 
-                                lsts={item.films}
-                                categories={genres}
-                                domain={9}
-                                k="month"
-                                w={w} h={h}
-                                target="genre"
-                                cnt={12}/>
+                    <StackedBar title="# watched per month by genre" 
+                    lsts={item.films}
+                    categories={genres}
+                    domain={9}
+                    k="month"
+                    w={w} h={h}
+                    target="genre"
+                    cnt={12}/>
                                 
-                                <StackedBar title="# watched per month by decade released" 
-                                lsts={item.films}
-                                domain={9}
-                                categories={decades}
-                                k="month"
-                                w={w} h={h}
-                                target="decade"
-                                cnt={12}/>
+                    <StackedBar title="# watched per month by decade released" 
+                    lsts={item.films}
+                    domain={9}
+                    categories={decades}
+                    k="month"
+                    w={w} h={h}
+                    target="decade"
+                    cnt={12}/>
                             </div>
             ))}
         

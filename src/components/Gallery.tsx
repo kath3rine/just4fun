@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../style/Gallery.css"
 
-interface PageType {
+type PageType = {
     name: string;
     img: string;
     date: string;
@@ -10,11 +10,7 @@ interface PageType {
     link?: string;
 }
 
-interface PageProps {
-    page: PageType;
-}
-
-function Page({page} : PageProps) {
+function Page({page} : {page: PageType}) {
     return (
         <div id="page">
             <div id="item">
@@ -38,7 +34,7 @@ interface GalleryProps {
     col: string;
 }
 
-function Gallery({pages, title, num, col} : GalleryProps) {
+function Gallery(props : GalleryProps) {
     const [idx, setIdx] = useState<number>(0);
 
     const onBack = () => {
@@ -46,17 +42,17 @@ function Gallery({pages, title, num, col} : GalleryProps) {
     };
 
     const onNext = () => {
-        setIdx((prev) => Math.min(prev + 1, pages.length - 1));
+        setIdx((prev) => Math.min(prev + 1, props.pages.length - 1));
     };
 
     const sliding = {
-        transform: `translateX(-${idx * (100 / num)}%)`,
+        transform: `translateX(-${idx * (100 / props.num)}%)`,
     };
     
     return(
-        <div id="gallery" className={col}>
+        <div id="gallery" className={props.col}>
             <div id="header">
-                <h2>{title}</h2>
+                <h2>{props.title}</h2>
                 <div id="buttons">
                     <button onClick={onBack}>back</button>
                     <button onClick={onNext}>next</button>
@@ -65,7 +61,7 @@ function Gallery({pages, title, num, col} : GalleryProps) {
             
             <div id="wrapper">
                 <div id="gallery-content" style={sliding}>
-                {pages.map((page : PageType, index) => (
+                { props.pages.map((page : PageType, index : number) => (
                     <div key={index}>
                         <Page page={page}/>
                     </div>

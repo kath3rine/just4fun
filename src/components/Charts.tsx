@@ -198,7 +198,7 @@ export function BarGraph(props: BarGraphProps) {
                 <Bar dataKey="count" >
                     {data.map((entry, index) => (
                         <Cell key={`cell-${index}`} 
-                        fill={props.color && props.color >= 0 && props.color <= palette.length 
+                        fill={props.color && props.color >= 0 && props.color < palette.length 
                             ? palette[props.color] 
                             : palette[index % palette.length]} />
                     ))}

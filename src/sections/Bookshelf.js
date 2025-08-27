@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Books from '../data/BookReviews.json'
 import '../style/Bookshelf.css'
 import RatingBar from '../components/RatingBar';
-import { BarGraph, AvgRating, PieGraph  } from '../components/Charts';
+import { BarGraph, AvgRating, PieGraph, AreaGraph  } from '../components/Charts';
 
 function Book({book, c, index}) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -30,9 +30,9 @@ function Book({book, c, index}) {
 }
 
 function Bookshelf() {
-    const w = 325
+    const w = 450
     const h = 250
-    const genres = [ "sci-fi", "romance", "mystery" ]
+    const genres = [ "sci-fi", "romance", "mystery", "non-fiction", "fiction" ]
     
     return (
         <div id="bookshelf">
@@ -42,7 +42,7 @@ function Bookshelf() {
                 <div id="shelf">
                         {Books.map((book, index) => (
                             <div>
-                                { index > Books.length - (Books.length % 4) - 1  
+                                { index > Books.length - (Books.length % 5) - 1  
                                     ? <Book book={book} index = {index + 1} c="bottom"/> 
                                     : <Book book={book} index = {index + 1} c="top"/>
                                 }
@@ -64,7 +64,7 @@ function Bookshelf() {
                 offset={1}
                 cnt={5}/>
 
-                <BarGraph title="# of books read each month"
+                <AreaGraph title="# of books read each month"
                 lst={Books}
                 offset={1}
                 k="month"

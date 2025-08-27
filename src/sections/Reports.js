@@ -1,11 +1,13 @@
 import Data from "../data/Report.json"
 import MayEating from "../assets/reports/may-eating.jpeg"
 import JunEating from "../assets/reports/jun-eating.jpg"
+import JulEating from "../assets/reports/jul-eating.png"
+import AugEating from "../assets/reports/aug-eating.png"
 
 function ReportItem({item, i, index}) {
     const starts = ["R", "E", "P", "O", "R", "T"]
-    const titles = ["EADING", "ATING", "LAYING", "BSESSING", "ECOMMENDING", "REATING"]
-    const eData = { 0: MayEating, 1: JunEating}
+    const titles = ["EADING", "XPERIENCING", "LAYING", "BSESSING", "ECOMMENDING", "REATING"]
+    const eData = { 3: MayEating, 2: JunEating, 1: JulEating, 0: AugEating}
     return (
         <div style={{ 
             display: "flex",
@@ -49,7 +51,7 @@ function ReportItem({item, i, index}) {
                             {index == 0 && "by "}{index == 1 && "@ " }{index == 3 && "from " }{index == 4 && "("}{item.details}{index == 4 && ")"}
                         </div> }
                     </div> 
-                    { i in eData && index == 1 && 
+                    { i in eData && index == 5 && 
                         <img src={eData[i]}
                         style={{
                             height: "85px", 

@@ -1,25 +1,17 @@
 import { useState } from "react";
 
-interface NoteData {
-    header: number;
-    text: string;
-    list?: string[];
+type NoteItemType = {
+    header: number; 
+    text: string; 
+    list?: string[]
 }
 
-interface NoteType {
+type NoteType = {
     title: string;
-    items: NoteData[]
+    items: []
 }
 
-interface NoteProps {
-    note: NoteType;
-}
-
-interface NotesProps {
-    notes: NoteType[]
-}
-
-const Note : React.FC<NoteProps> = ({note}) => {
+function Note({note}: {note: NoteType}) {
     const [expand, setExpand] = useState(false);
     const toggle = () => {
         setExpand(!expand); 
@@ -37,24 +29,22 @@ const Note : React.FC<NoteProps> = ({note}) => {
                 padding: "10px 20px 0px 20px"
             }}>
                 <h3 style={{ textAlign: "center"}}>
-                {note.title}
+                    {note.title}
                 </h3>
                 <div style={{marginBottom: "20px"}}>
-                {expand && note.items && note.items.map((item) => (
-                <div >
-                    <p style={{fontWeight: "bold", }}>
-                        {item.header}
-                    </p>
-                    <p>{item.text}</p>
-                    
-                        {item.list && item.list.map((bullet) => (
-                        <li style={{margin: "0px"}}>
-                            {bullet}
-                        </li>
-                        ))}
-                    
-                </div>
-                ))}
+                    {expand && note.items && note.items.map((item : NoteItemType) => (
+                    <div>
+                        <p style={{fontWeight: "bold", }}>
+                            {item.header}
+                        </p>
+                        <p>{item.text}</p>
+                            {item.list && item.list.map((bullet: string) => (
+                            <li style={{margin: "0px"}}>
+                                {bullet}
+                            </li>
+                            ))}
+                    </div>
+                    ))}
                 </div>
                 <button style={{
                     height: "30px", 
@@ -70,7 +60,7 @@ const Note : React.FC<NoteProps> = ({note}) => {
     )
 }
 
-const Notes : React.FC<NotesProps> = ({notes}) => {
+function Notes({notes}: {notes: NoteType[]}) {
     return(
         <div style={{ marginTop: "20px", paddingTop: "20px" }}>
             <h2>thoughts</h2>

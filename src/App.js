@@ -22,7 +22,6 @@ function Home() {
           </a>
         </p>
         <Reports />
-        <Favorites />
         <Notes notes={Thoughts}/>
     </div>
   )
@@ -64,6 +63,13 @@ function App() {
       element: 
       <div id="read-page" className='page'>
         <Bookshelf/>
+      </div>
+    }, 
+    {
+      path: "/secret", title: ".",
+      element: 
+      <div id="secret-page" className='page'>
+        <Shhh/>
       </div>
     }
   ]

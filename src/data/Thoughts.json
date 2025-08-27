@@ -30,19 +30,81 @@
         {
             "header": "sf",
             "list": [
-                "sutro baths",
-                "twin peaks", 
-                "cal academy of sciences"
+                "exploratorium",
+                "twin peaks",
+                "emporium / madrone art bar"
             ]
         }, 
         {
             "header": "nyc",
             "list": [
-                "cabaret",
-                "brooklyn flea",
-                "high line / chelsea market",
-                "smorgasburg",
-                "roosevelt island tramway"
+                "shopping @ soho / west village + williamsburg"
+            ]
+        }
+    ]
+ },
+ {
+    "title": "europe 202? interrail",
+    "items": [
+        {
+            "header": "berlin",
+            "list": [
+                "berghain, kitkat club"
+            ]
+        },
+        {
+            "header": "copenhagen",
+            "list": [
+                "tivoli gardens",
+                "nyhavn"
+            ]
+        },
+        {
+            "header": "amsterdam",
+            "list": [
+                "canals",
+                "rld",
+                "coffee shop"
+            ]
+        },
+        {
+            "header": "budapest",
+            "list": [
+                "szimpla kert",
+                "thermal baths",
+                "parliament building"
+            ]
+        },
+        {
+            "header": "prague",
+            "list": [
+                "astronomical clock",
+                "dog bar"
+            ]
+        }
+    ]
+ },
+ {
+    "title": "date ideas",
+    "items": [
+        {
+            "header": "to-do",
+            "list": [
+                "barcade",
+                "interactive museum",
+                "twin peaks / sutro baths",
+                "zoo / aquarium",
+                "escape room"
+            ]
+        },
+        {
+            "header": "tried and true",
+            "list": [
+                "mini golf",
+                "flight club",
+                "trivia",
+                "rooftop bar",
+                "artechouse"
             ]
         }
     ]

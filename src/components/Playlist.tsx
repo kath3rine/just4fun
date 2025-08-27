@@ -1,14 +1,9 @@
-interface Song {
+type Song = {
     month: string;
     link: string;
 }
 
-interface PlaylistProps {
-    title: string;
-    songs: Song[];
-}
-
-function Playlist({title, songs} : PlaylistProps) {
+function Playlist({title, songs} : {title: string, songs: Song[]}) {
 
     return(
         <div style={{
@@ -18,7 +13,8 @@ function Playlist({title, songs} : PlaylistProps) {
             borderRight: "10px black solid",
             borderTop: "40px black solid",
             borderBottom: "40px black solid",
-            borderRadius: "20px"
+            borderRadius: "20px",
+            marginRight: "20px"
         }}>
             <h2 style={{margin: "10px", color: "white"}}>
                 {title}

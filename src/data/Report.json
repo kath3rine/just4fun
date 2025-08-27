@@ -1,5 +1,65 @@
 [
     {
+        "month": "august",
+        "items": [
+            {
+                "item": "everything is tuberculosis",
+                "details": "john green",
+                "link": "https://upload.wikimedia.org/wikipedia/en/1/17/Everything_Is_Tuberculosis.jpg"
+            },
+            {
+                "item": "sutro baths"
+            },
+            {
+                "link": "https://open.spotify.com/embed/playlist/4EeS88Ehu7TtBiK04ltBvx?utm_source=generator"
+            },
+            {
+                "item": "black skeleton hoodie",
+                "details": "urban outfitters"
+            },
+            {
+                "item": "",
+                "details": "",
+                "link": ""
+            },
+            
+            {
+                "item": "mango matcha",
+                "details": "komeya no bento"
+            }
+        ]
+    },
+    {
+        "month": "july",
+        "items": [
+            {
+                "item": "if we were villians",
+                "details": "e. l. rio",
+                "link": "https://upload.wikimedia.org/wikipedia/en/7/74/If_We_Were_Villains.jpg"
+            },
+            {
+                "item": "broadway shows in nyc"
+            },
+            {
+                "link": "https://open.spotify.com/embed/album/1catLRW8LZfugEmfjnTWCk?utm_source=generator"
+            },
+            {
+                "item": "black miniskirt",
+                "details": "thrifted"
+            },
+            {
+                "item": "cabaret",
+                "details": "broadway play",
+                "link": ""
+            },
+            
+            {
+                "item": "mango dessert ",
+                "details": "mango mango"
+            }
+        ]
+    },
+    {
         "month": "june",
         "items": [
             {
@@ -8,8 +68,7 @@
                 "link": "https://upload.wikimedia.org/wikipedia/en/a/ad/Crying_in_H_Mart_%28Michelle_Zauner%29.png"
             },
             {
-                "item": "nachos ",
-                "details": "mission - navy yard | washington, dc"
+                "item": "dupont pride block party"
             },
             {
                 "link": "https://open.spotify.com/embed/playlist/3YcEc58ZJMAcvByCiAPRO9?utm_source=generator&theme=0"
@@ -22,7 +81,8 @@
                 "link": "https://upload.wikimedia.org/wikipedia/en/7/7f/Bodies_Bodies_Bodies_%28poster%29.jpeg"
             },
             {
-                "item": "orange cream soda coke"
+                "item": "nachos ",
+                "details": "mission - navy yard"
             }
         ]
     },
@@ -35,8 +95,7 @@
                 "link": "https://upload.wikimedia.org/wikipedia/en/d/d9/Last_Night_at_the_Telegraph_Club_%28Malinda_Lo%29.png"
             },
             {
-                "item": "lamb kebab",
-                "details": "albi | washington, dc"
+
             },
             {
                 "link": "https://open.spotify.com/embed/playlist/61QwjoTzvPiKtH8r04BuEL?utm_source=generator&theme=0"
@@ -52,8 +111,10 @@
                 
             },
             {
-
+                "item": "lamb kebab",
+                "details": "albi"
             }
         ]
     }
 ]
+

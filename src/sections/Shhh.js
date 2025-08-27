@@ -1,7 +1,7 @@
 import Data25 from '../data/Data25.json'
 import Data24 from '../data/Data24.json'
 import Data23 from '../data/Data23.json'
-import { StackedArea, StackedBar, AreaGraph, PieGraph } from '../components/Charts.tsx'
+import { StackedArea, StackedBar, BarGraph, AreaGraph, PieGraph } from '../components/Charts.tsx'
 
 function Shhh() {
     const w = 430
@@ -32,7 +32,7 @@ function Shhh() {
     ]
 
     const stacked2Data = [
-        { title: "age", ratio: 0.75, categories: genders, k: "gender"},
+        { title: "gender", ratio: 0.75, categories: genders, k: "gender"},
         { title: "race", ratio: 0.9, categories: races, k: "race"},
         { title: "how we met", ratio: 0.7, categories: meetings, k: "meeting"},
         { title: "location", ratio: 0.75, categories: locations, k: "location"},
