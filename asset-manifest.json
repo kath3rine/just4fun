@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/just4fun/static/css/main.0910556f.css",
-    "main.js": "/just4fun/static/js/main.8a7d78a4.js",
+    "main.css": "/just4fun/static/css/main.2899afb2.css",
+    "main.js": "/just4fun/static/js/main.56739180.js",
     "static/js/453.41ad13ab.chunk.js": "/just4fun/static/js/453.41ad13ab.chunk.js",
     "static/media/500dos.png": "/just4fun/static/media/500dos.479ce6857c3c78131157.png",
     "static/media/jun-eating.jpg": "/just4fun/static/media/jun-eating.850dee900082de0de454.jpg",
+    "static/media/jul-eating.png": "/just4fun/static/media/jul-eating.f5a1615b9ec054b62c2e.png",
     "static/media/blackswan.png": "/just4fun/static/media/blackswan.7aa1f48c71e7d37176a3.png",
     "static/media/may-eating.jpeg": "/just4fun/static/media/may-eating.8a6c9a244a29459d044b.jpeg",
     "static/media/thohh.png": "/just4fun/static/media/thohh.a96c9e9261562aebcdf5.png",
+    "static/media/aug-eating.png": "/just4fun/static/media/aug-eating.675723b2ced6db8b4922.png",
     "static/media/mixed.png": "/just4fun/static/media/mixed.bdfd3d6c620a00423332.png",
     "static/media/eye.JPG": "/just4fun/static/media/eye.9849a357c96151990c35.JPG",
     "static/media/medal.JPG": "/just4fun/static/media/medal.c418e3182497d7251789.JPG",
@@ -20,12 +22,12 @@
     "static/media/portfolio.png": "/just4fun/static/media/portfolio.2d494b6432064b9a0238.png",
     "static/media/whitepaper.jpg": "/just4fun/static/media/whitepaper.0df96b7abb1b44c80b8b.jpg",
     "index.html": "/just4fun/index.html",
-    "main.0910556f.css.map": "/just4fun/static/css/main.0910556f.css.map",
-    "main.8a7d78a4.js.map": "/just4fun/static/js/main.8a7d78a4.js.map",
+    "main.2899afb2.css.map": "/just4fun/static/css/main.2899afb2.css.map",
+    "main.56739180.js.map": "/just4fun/static/js/main.56739180.js.map",
     "453.41ad13ab.chunk.js.map": "/just4fun/static/js/453.41ad13ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0910556f.css",
-    "static/js/main.8a7d78a4.js"
+    "static/css/main.2899afb2.css",
+    "static/js/main.56739180.js"
   ]
 }
