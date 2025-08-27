@@ -42,7 +42,7 @@
         "age": 19,
         "location": "restaurant",
         "freq": 1,
-        "race": "mixed"
+        "race": "me/sa"
     },
     {
         "gender": "M",
@@ -60,7 +60,7 @@
         "age": 21,
         "location": "activity",
         "freq": 3,
-        "race": "mixed"
+        "race": "hispanic"
     },
     {
         "gender": "M",
@@ -78,7 +78,7 @@
         "age": 18,
         "location": "activity",
         "freq": 1,
-        "race": "mixed"
+        "race": "asian"
     },
     {
         "gender": "F",
