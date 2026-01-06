@@ -6,7 +6,7 @@
         "age": 22,
         "location": "bar",
         "freq": 1,
-        "race": "mixed"
+        "race": "me/sa"
     },
     {
         "gender": "F",
@@ -42,7 +42,7 @@
         "age": 18,
         "location": "bar",
         "freq": 1,
-        "race": "mixed"
+        "race": "hispanic"
     },
     {
         "gender": "F",
